@@ -14,6 +14,7 @@ public class TriggerControl : MonoBehaviour
 
     bool meshChange = false;
     public bool isCompleted = false;
+    public bool safe = false;
     private void Awake()
     {
         if (instance == null)
@@ -70,6 +71,7 @@ public class TriggerControl : MonoBehaviour
     {
         if (isCompleted && meshChange)
         {
+            safe=true;
             gameObject.transform.GetChild(1).GetComponent<SkinnedMeshRenderer>().enabled = false;
             gameObject.AddComponent<MeshFilter>();
             gameObject.GetComponent<Renderer>().enabled = true;
@@ -84,12 +86,15 @@ public class TriggerControl : MonoBehaviour
             Destroy(gameObject.GetComponent<CapsuleCollider>());
 
             reloadImage.fillAmount = 0;
+            
         }
     }
     void MeshReturn()
     {
+        
         if (Input.GetMouseButtonDown(0))
         {
+            safe=false;
             if (!gameObject.GetComponent<BoxCollider>().Equals(null))
             {
                 cloud.Play();

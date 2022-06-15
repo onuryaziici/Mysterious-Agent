@@ -4,9 +4,15 @@ using UnityEngine;
 
 public class Trap : MonoBehaviour
 {
+    public GameObject[] trapObjects;
     public GameObject trapObject;
     bool trap = false;
     float posY = 1;
+    public void Start()
+    {
+       trapObject=Instantiate(trapObjects[Random.Range(0,3)],new Vector3(0,7,13), Quaternion.identity);
+
+    }
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Player"))
