@@ -4,21 +4,30 @@ using UnityEngine;
 
 public class DoorDetection : MonoBehaviour
 {
-    Quaternion targetAngle;
-    [SerializeField] float openedDoorAngle;
-    [SerializeField] float speed;
-    // Start is called before the first frame update
-    void Start()
-    {
-        targetAngle = Quaternion.Euler(0, openedDoorAngle, 0);
-    }
+    [SerializeField] Animator anim = null;
+    [SerializeField] bool openTrigger = false;
+    [SerializeField] bool closeTrigger = false;
+
 
     // Update is called once per frame
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            transform.rotation = Quaternion.Slerp(transform.rotation, targetAngle, speed * Time.deltaTime);
+            if (openTrigger)
+            {
+                anim.Play("DoorOpen", 0, 0.0f);
+                gameObject.SetActive(false);
+            }
+
+            else if (closeTrigger)
+            {
+                anim.Play("DoorClosed", 0, 0.0f);
+                gameObject.SetActive(false);
+            }
         }
+
     }
+
+
 }
