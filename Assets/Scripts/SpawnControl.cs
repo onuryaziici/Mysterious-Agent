@@ -8,6 +8,7 @@ public class SpawnControl : MonoBehaviour
 
     float posX, posZ;
     int countPlus;
+    GameObject plus;
 
     Vector3 posSpawn;
     void Update()
@@ -24,8 +25,12 @@ public class SpawnControl : MonoBehaviour
 
         if (countPlus == 0)
         {
-            var plus = Instantiate(spawnPlus, posSpawn, spawnPlus.transform.rotation);
-            plus.transform.Rotate(0, 5, 0);
+            var spawn = Instantiate(spawnPlus, posSpawn, Quaternion.identity);
+            plus = spawn.gameObject;
+        }
+        else
+        {
+            plus.transform.Rotate(0, Time.deltaTime * 90, 0);
         }
     }
 }

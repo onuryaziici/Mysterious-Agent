@@ -11,6 +11,7 @@ public class TriggerControl : MonoBehaviour
     public Image reloadImage, lifeBar;
     public Text incNumber;
     public ParticleSystem cloud;
+    public ParticleSystem lifeBarPlus;
 
     bool meshChange = false;
     public bool isCompleted = false;

@@ -16,6 +16,7 @@ public class LifeBarInc : MonoBehaviour
         {
             BarInc = true;
             TriggerControl.instance.lifeBar.fillAmount += 0.1f;
+            TriggerControl.instance.lifeBarPlus.Play();
             Destroy(gameObject, 0.1f);
         }
         if (collision.gameObject.CompareTag("Untagged"))
