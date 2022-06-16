@@ -24,7 +24,8 @@ public class SpawnControl : MonoBehaviour
 
         if (countPlus == 0)
         {
-            Instantiate(spawnPlus, posSpawn, spawnPlus.transform.rotation);
+            var plus = Instantiate(spawnPlus, posSpawn, spawnPlus.transform.rotation);
+            plus.transform.Rotate(0, 5, 0);
         }
     }
 }
