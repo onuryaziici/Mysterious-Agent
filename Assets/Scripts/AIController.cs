@@ -17,7 +17,9 @@ public class AIController : MonoBehaviour
     public float meshResolution = 1.0f;             //  How many rays will cast per degree
     public int edgeIterations = 4;                  //  Number of iterations to get a better performance of the mesh filter when the raycast hit an obstacule
     public float edgeDistance = 0.5f;               //  Max distance to calcule the a minumun and a maximum raycast when hits something
-    
+    public GameObject bullet;
+    public Transform shootPoint;
+    public float shootSpeed = 10f;
 
     public MeshFilter viewMeshFilter;
     Mesh viewMesh;
@@ -59,7 +61,7 @@ public class AIController : MonoBehaviour
 
         m_CurrentWaypointIndex = 0;                 //  Set the initial waypoint
         navMeshAgent = GetComponent<NavMeshAgent>();
-
+        animator = GetComponent<Animator>();
         navMeshAgent.isStopped = false;
         navMeshAgent.speed = speedWalk;             //  Set the navemesh speed with the normal speed of the enemy
         navMeshAgent.SetDestination(waypoints[m_CurrentWaypointIndex].position);    //  Set the destination to the first waypoint
@@ -100,6 +102,7 @@ public class AIController : MonoBehaviour
         if(collision.gameObject.CompareTag("TrapObject"))
         {
             cloud.Play();
+            animator.SetTrigger("Death");
             Destroy(this.gameObject, 1f);
         }
     }
@@ -201,6 +204,9 @@ public class AIController : MonoBehaviour
     private void Attack()
     {
         animator.SetTrigger("Attack");
+        GameObject currentBullet = Instantiate(bullet, shootPoint.position, shootPoint.rotation);
+        Rigidbody rig = currentBullet.GetComponent<Rigidbody>();
+        rig.AddForce(transform.forward * shootSpeed, ForceMode.VelocityChange);
         player.GetComponent<Player>().TakeDamage(attackDamage);
         Debug.Log("attackDamage");
     }
