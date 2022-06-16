@@ -3,7 +3,22 @@ guid: 4cda8f108acb8034485be911446afaae
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: atlas2_GLASS
+    second: {fileID: 2100000, guid: de4b43db276a9b8489304cd5de16627d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert18
+    second: {fileID: 2100000, guid: fd5f04c96be42ae4c9ec9436ee67c378, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: PolygonHeist_Texture_01_A
+    second: {fileID: 2800000, guid: d95dfed1b0874324483997f847e713c1, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0

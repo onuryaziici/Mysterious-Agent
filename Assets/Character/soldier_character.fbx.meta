@@ -18,7 +18,12 @@ ModelImporter:
   - first:
       74: -4799524434163024911
     second: Armature|walk
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: atlas2
+    second: {fileID: 2100000, guid: 2b0016912c7498645aebdf98baf1f336, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
