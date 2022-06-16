@@ -11,7 +11,7 @@ public class Trap : MonoBehaviour
     public void Start()
     {
        trapObject=Instantiate(trapObjects[Random.Range(0,3)],new Vector3(0,7,13), Quaternion.identity);
-
+        trapObject.tag = "TrapObject";
     }
     private void OnCollisionEnter(Collision collision)
     {

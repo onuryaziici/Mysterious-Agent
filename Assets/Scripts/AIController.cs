@@ -23,6 +23,7 @@ public class AIController : MonoBehaviour
     Mesh viewMesh;
     public Material fovRedMaterial;
     public Material fovWhiteMaterial;
+    public ParticleSystem cloud;
 
     public Transform[] waypoints;                   //  All the waypoints where the enemy patrols
     int m_CurrentWaypointIndex;                     //  Current waypoint where the enemy is going to
@@ -93,6 +94,14 @@ public class AIController : MonoBehaviour
     void LateUpdate()
     {
         DrawFieldOfView();
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.CompareTag("TrapObject"))
+        {
+            cloud.Play();
+            Destroy(this.gameObject, 1f);
+        }
     }
 
     public void Chasing()
