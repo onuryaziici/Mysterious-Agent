@@ -5,16 +5,21 @@ using UnityEngine.UI;
 
 public class JoystickControl : MonoBehaviour
 {
+    public static JoystickControl instance = null;
     public DynamicJoystick dynamic;
     public GameObject background;
 
     float moveSpeed = 5;
     float turnSpeed = 5;
 
-    private Animator playerAnim;
+    public Animator playerAnim;
     void Awake()
     {
-        playerAnim = GetComponent<Animator>();
+        if (instance == null)
+        {
+            instance = this;
+        }
+        //playerAnim = GetComponent<Animator>();
     }
     void FixedUpdate()
     {
@@ -22,7 +27,7 @@ public class JoystickControl : MonoBehaviour
         {
             Joystick();
         }
-        AnimatorControl();
+        //AnimatorControl();
     }
     void Joystick()
     {
