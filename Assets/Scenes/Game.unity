@@ -811,6 +811,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall_Interior (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 60451c388738d944682d0c9fc407e351, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60451c388738d944682d0c9fc407e351, type: 3}
 --- !u!1 &88854164 stripped
@@ -1325,6 +1329,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall_Interior (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 60451c388738d944682d0c9fc407e351, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60451c388738d944682d0c9fc407e351, type: 3}
 --- !u!1 &166798653 stripped
@@ -1431,7 +1439,7 @@ GameObject:
   - component: {fileID: 174961675}
   - component: {fileID: 174961678}
   - component: {fileID: 174961677}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BarrelTrigger
   m_TagString: Hide
   m_Icon: {fileID: 0}
@@ -1667,6 +1675,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: fb720fe8f9f6ee549932bfc19e2bda2c, type: 3}
       propertyPath: m_Name
       value: Barrel (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fb720fe8f9f6ee549932bfc19e2bda2c, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb720fe8f9f6ee549932bfc19e2bda2c, type: 3}
@@ -2828,7 +2840,7 @@ GameObject:
   - component: {fileID: 412950659}
   - component: {fileID: 412950658}
   - component: {fileID: 412950657}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3562,7 +3574,7 @@ GameObject:
   - component: {fileID: 555444327}
   - component: {fileID: 555444329}
   - component: {fileID: 555444328}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7133,6 +7145,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall_Interior
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 60451c388738d944682d0c9fc407e351, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60451c388738d944682d0c9fc407e351, type: 3}
 --- !u!1 &1182431291 stripped
@@ -8128,6 +8144,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 60451c388738d944682d0c9fc407e351, type: 3}
       propertyPath: m_Name
       value: Wall_Interior (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 60451c388738d944682d0c9fc407e351, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60451c388738d944682d0c9fc407e351, type: 3}
@@ -10485,6 +10505,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall_Interior (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 60451c388738d944682d0c9fc407e351, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60451c388738d944682d0c9fc407e351, type: 3}
 --- !u!1 &1895208664 stripped
@@ -10646,6 +10670,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 60451c388738d944682d0c9fc407e351, type: 3}
       propertyPath: m_Name
       value: Wall_Interior (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 60451c388738d944682d0c9fc407e351, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60451c388738d944682d0c9fc407e351, type: 3}
@@ -11505,6 +11533,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 60451c388738d944682d0c9fc407e351, type: 3}
       propertyPath: m_Name
       value: Wall_Interior (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 60451c388738d944682d0c9fc407e351, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60451c388738d944682d0c9fc407e351, type: 3}

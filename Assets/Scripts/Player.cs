@@ -8,10 +8,12 @@ public class Player : MonoBehaviour
     public float speedAmount=1f;
     public int maxHealth = 100;
     public int currentHealth;
+    Animator anim;
     // Start is called before the first frame update
     void Start()
     {
         currentHealth = maxHealth;
+        anim = GetComponent<Animator>();
     }
 
 
@@ -29,7 +31,9 @@ public class Player : MonoBehaviour
     }
     void Die()
     {
-        Time.timeScale= 0;
+       
+        anim.SetBool("isDie", true);
+        this.gameObject.GetComponent<JoystickControl>().enabled = false;
         Debug.Log("Player Died!");
     }
     
