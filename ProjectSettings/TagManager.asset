@@ -10,6 +10,7 @@ TagManager:
   - Cloud
   - Missile
   - TrapObject
+  - Attack
   layers:
   - Default
   - TransparentFX

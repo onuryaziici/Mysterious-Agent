@@ -297,7 +297,7 @@ public class AIController : MonoBehaviour
             if (m_playerInRange)
             {
                 Stop();
-                if(Time.time >= nextAttackTime)
+                if(Time.time >= nextAttackTime && player1.currentHealth > 0)
                 {
                     Attack();
                     nextAttackTime = Time.time + 1f / attackRate; 

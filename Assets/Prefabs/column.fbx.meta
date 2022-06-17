@@ -3,7 +3,17 @@ guid: 96845ef2db360394d9eff4c080fdd691
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: atlas2
+    second: {fileID: 2100000, guid: 20c9af4449373754bb47b7e09aa7e5c0, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: PolygonHeist_Texture_01_A
+    second: {fileID: 2800000, guid: 6cf9c42353e924e4dae1c07b02be654b, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0

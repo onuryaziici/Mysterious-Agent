@@ -8,7 +8,7 @@ public class TriggerControl : MonoBehaviour
     public static TriggerControl instance = null;
     GameObject triggerObject;
 
-    public Image reloadImage, lifeBar;
+    public Image reloadImage, lifeBar, meshReturnBar;
     public Text incNumber;
     public ParticleSystem cloud;
     public ParticleSystem lifeBarPlus;
@@ -34,6 +34,30 @@ public class TriggerControl : MonoBehaviour
             meshChange = true;
             triggerObject = other.gameObject;
         }
+        if (other.gameObject.CompareTag("Attack"))
+        {
+            safe = false;
+            if (!gameObject.GetComponent<BoxCollider>().Equals(null))
+            {
+                cloud.Play();
+            }
+
+            gameObject.transform.GetChild(1).GetComponent<SkinnedMeshRenderer>().enabled = true;
+            gameObject.GetComponent<Renderer>().enabled = false;
+
+            if (gameObject.GetComponent<CapsuleCollider>().Equals(null))
+            {
+                gameObject.AddComponent<CapsuleCollider>();
+
+                gameObject.GetComponent<CapsuleCollider>().height = 2;
+                gameObject.GetComponent<CapsuleCollider>().radius = 0.5f;
+                gameObject.GetComponent<CapsuleCollider>().center = new Vector3(0, 1, 0);
+            }
+
+            Destroy(gameObject.GetComponent<BoxCollider>());
+            Destroy(gameObject.GetComponent<MeshFilter>());
+            meshReturnBar.gameObject.SetActive(false);
+        }
     }
     private void OnTriggerExit(Collider other)
     {
@@ -48,6 +72,7 @@ public class TriggerControl : MonoBehaviour
     {
         Reload();
         MeshChange();
+        MeshPlayer();
         MeshReturn();
     }
     void Reload()
@@ -87,15 +112,15 @@ public class TriggerControl : MonoBehaviour
             Destroy(gameObject.GetComponent<CapsuleCollider>());
 
             reloadImage.fillAmount = 0;
-            
+            meshReturnBar.fillAmount = 1;
+            meshReturnBar.gameObject.SetActive(true);         
         }
     }
     void MeshReturn()
     {
-        
-        if (Input.GetMouseButtonDown(0))
+        if (meshReturnBar.fillAmount == 0 && meshReturnBar.gameObject.activeInHierarchy)
         {
-            safe=false;
+            safe = false;
             if (!gameObject.GetComponent<BoxCollider>().Equals(null))
             {
                 cloud.Play();
@@ -115,6 +140,14 @@ public class TriggerControl : MonoBehaviour
 
             Destroy(gameObject.GetComponent<BoxCollider>());
             Destroy(gameObject.GetComponent<MeshFilter>());
+            meshReturnBar.gameObject.SetActive(false);
+        }
+    }
+    void MeshPlayer()
+    {
+        if (!gameObject.GetComponent<BoxCollider>().Equals(null))
+        {
+            meshReturnBar.fillAmount -= Time.deltaTime / 5;
         }
     }
 }
