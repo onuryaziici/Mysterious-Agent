@@ -772,6 +772,9 @@ MonoBehaviour:
   meshResolution: 1
   edgeIterations: 4
   edgeDistance: 0.5
+  bullet: {fileID: 0}
+  shootPoint: {fileID: 0}
+  shootSpeed: 10
   viewMeshFilter: {fileID: 2034325148}
   fovRedMaterial: {fileID: 2100000, guid: f6bf9bcfa3dab52429535661c79645fb, type: 2}
   fovWhiteMaterial: {fileID: 2100000, guid: a1ca03cb4a025b245beeeed00ac7121e, type: 2}
@@ -1647,7 +1650,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 174961674}
   m_LocalRotation: {x: -0.000000021855694, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.6}
+  m_LocalPosition: {x: 0, y: 0, z: -0.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 217339285}
@@ -2801,6 +2804,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: soldier_character (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2fa5a6bd056ff0346932795f4d00ba2d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fa5a6bd056ff0346932795f4d00ba2d, type: 3}
 --- !u!1 &360386571
@@ -3118,7 +3125,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 412950655}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: -0.6}
+  m_LocalPosition: {x: 0, y: 0, z: -0.8}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 555444327}
@@ -6362,6 +6369,18 @@ PrefabInstance:
       propertyPath: InitialModule.startSizeZ.minMaxState
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 19836136, guid: 3c2fb72925d7f3c4a8c2b92cc3a81390, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key1.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19836136, guid: 3c2fb72925d7f3c4a8c2b92cc3a81390, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key1.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19836136, guid: 3c2fb72925d7f3c4a8c2b92cc3a81390, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key1.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 19901842, guid: 3c2fb72925d7f3c4a8c2b92cc3a81390, type: 3}
       propertyPath: m_Materials.Array.size
       value: 1
@@ -7072,6 +7091,9 @@ MonoBehaviour:
   meshResolution: 1
   edgeIterations: 4
   edgeDistance: 0.5
+  bullet: {fileID: 0}
+  shootPoint: {fileID: 0}
+  shootSpeed: 10
   viewMeshFilter: {fileID: 945269452}
   fovRedMaterial: {fileID: 2100000, guid: f6bf9bcfa3dab52429535661c79645fb, type: 2}
   fovWhiteMaterial: {fileID: 2100000, guid: a1ca03cb4a025b245beeeed00ac7121e, type: 2}
