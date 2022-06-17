@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 public class AIController : MonoBehaviour
 {
-    public NavMeshAgent navMeshAgent;               //  Nav mesh agent component
+    NavMeshAgent navMeshAgent;               //  Nav mesh agent component
     public float startWaitTime = 4;                 //  Wait time of every action
     public float timeToRotate = 2;                  //  Wait time when the enemy detect near the player without seeing
     public float speedWalk = 6;                     //  Walking speed, speed in the nav mesh agent
@@ -17,9 +17,7 @@ public class AIController : MonoBehaviour
     public float meshResolution = 1.0f;             //  How many rays will cast per degree
     public int edgeIterations = 4;                  //  Number of iterations to get a better performance of the mesh filter when the raycast hit an obstacule
     public float edgeDistance = 0.5f;               //  Max distance to calcule the a minumun and a maximum raycast when hits something
-    public GameObject bullet;
-    public Transform shootPoint;
-    public float shootSpeed = 10f;
+    public ParticleSystem muzzleFlash;
 
     public MeshFilter viewMeshFilter;
     Mesh viewMesh;
@@ -40,7 +38,7 @@ public class AIController : MonoBehaviour
     public bool m_IsPatrol;                                //  If the enemy is patrol, state of patroling
     public bool m_CaughtPlayer;                            //  if the enemy has caught the player
     public TriggerControl trcontrol;
-    public Animator animator;
+    Animator animator;
     public bool kovala=false;
     public float mesafe;
     public Transform player;
@@ -204,11 +202,9 @@ public class AIController : MonoBehaviour
     private void Attack()
     {
         animator.SetTrigger("Attack");
-        GameObject currentBullet = Instantiate(bullet, shootPoint.position, shootPoint.rotation);
-        Rigidbody rig = currentBullet.GetComponent<Rigidbody>();
-        rig.AddForce(transform.forward * shootSpeed, ForceMode.VelocityChange);
         player.GetComponent<Player>().TakeDamage(attackDamage);
         Debug.Log("attackDamage");
+        muzzleFlash.Play();
     }
 
     public void NextPoint()
