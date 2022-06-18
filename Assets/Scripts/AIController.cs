@@ -46,7 +46,9 @@ public class AIController : MonoBehaviour
     public float attackRate = 0.5f;
     float nextAttackTime=0f;
     public Player player1;
+    bool isDead = false;
 
+    
     void Start()
     {
         m_PlayerPosition = Vector3.zero;
@@ -90,6 +92,7 @@ public class AIController : MonoBehaviour
         {
             viewMeshFilter.GetComponent<MeshRenderer>().material = fovWhiteMaterial;
         }
+        Animation();
     }
     void LateUpdate()
     {
@@ -100,8 +103,7 @@ public class AIController : MonoBehaviour
         if(collision.gameObject.CompareTag("TrapObject"))
         {
             cloud.Play();
-            animator.SetTrigger("Death");
-            Destroy(this.gameObject, 1f);
+            StartCoroutine(TakeDamage());
         }
     }
 
@@ -201,10 +203,15 @@ public class AIController : MonoBehaviour
     }
     private void Attack()
     {
-        animator.SetTrigger("Attack");
-        player.GetComponent<Player>().TakeDamage(attackDamage);
-        Debug.Log("attackDamage");
-        muzzleFlash.Play();
+        if(!Player.instance.isDie)
+        {
+            animator.SetTrigger("Attack");
+            player.GetComponent<Player>().TakeDamage(attackDamage);
+            Debug.Log("attackDamage");
+            muzzleFlash.Play();
+        }
+            
+        
     }
 
     public void NextPoint()
@@ -452,4 +459,18 @@ public class AIController : MonoBehaviour
             pointB = _pointB;
         }
     }
+    public IEnumerator TakeDamage()
+    {
+        animator.SetTrigger("Death");
+        transform.Find("ViewVisualisation").gameObject.SetActive(false);
+        Debug.Log("ersg");
+        yield return new WaitForSeconds(1f);
+        this.gameObject.GetComponent<AIController>().enabled = false;
+
+    }
+    void Animation()
+    {
+        
+    }
+
 }

@@ -4,12 +4,21 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-
+    public static Player instance = null;
     public float speedAmount=1f;
     public int maxHealth = 100;
     public int currentHealth;
     Animator anim;
+    public bool isDie = false;
     // Start is called before the first frame update
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+    }
     void Start()
     {
         currentHealth = maxHealth;
@@ -21,18 +30,13 @@ public class Player : MonoBehaviour
     public void TakeDamage(int damage)
     {
   
-        currentHealth -=damage;
-
-        if(currentHealth<=0)
-        {
-            currentHealth=0;
-            Die();
-        }
+       Die();
+        
     }
     void Die()
     {
-       
-        anim.SetBool("isDie", true);
+        isDie = true;
+        anim.SetBool("isDie", isDie);
         this.gameObject.GetComponent<JoystickControl>().enabled = false;
         Debug.Log("Player Died!");
     }

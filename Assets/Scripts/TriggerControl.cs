@@ -7,12 +7,12 @@ public class TriggerControl : MonoBehaviour
 {
     public static TriggerControl instance = null;
     GameObject triggerObject;
-
     public Image reloadImage, lifeBar, meshReturnBar;
     public Text incNumber;
     public ParticleSystem cloud;
     public ParticleSystem lifeBarPlus;
-
+    public float recoveryTime;
+    Animator anim;
     bool meshChange = false;
     public bool isCompleted = false;
     public bool safe = false;
@@ -26,6 +26,7 @@ public class TriggerControl : MonoBehaviour
     private void Start()
     {
         gameObject.GetComponent<Renderer>().enabled = false;
+        anim = GetComponent<Animator>();
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -57,6 +58,9 @@ public class TriggerControl : MonoBehaviour
             Destroy(gameObject.GetComponent<BoxCollider>());
             Destroy(gameObject.GetComponent<MeshFilter>());
             meshReturnBar.gameObject.SetActive(false);
+            Attack();
+            StartCoroutine(other.gameObject.GetComponentInParent<AIController>().TakeDamage());
+            
         }
     }
     private void OnTriggerExit(Collider other)
@@ -147,7 +151,12 @@ public class TriggerControl : MonoBehaviour
     {
         if (!gameObject.GetComponent<BoxCollider>().Equals(null))
         {
-            meshReturnBar.fillAmount -= Time.deltaTime / 5;
+            meshReturnBar.fillAmount -= Time.deltaTime / recoveryTime;
         }
+    }
+    void Attack()
+    {
+        anim.SetTrigger("Attack");
+
     }
 }
