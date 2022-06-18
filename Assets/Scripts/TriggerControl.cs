@@ -34,7 +34,7 @@ public class TriggerControl : MonoBehaviour
             meshChange = true;
             triggerObject = other.gameObject;
         }
-        if (other.gameObject.CompareTag("Attack"))
+        if (other.gameObject.CompareTag("Attack") && !gameObject.GetComponent<BoxCollider>().Equals(null))
         {
             safe = false;
             if (!gameObject.GetComponent<BoxCollider>().Equals(null))
