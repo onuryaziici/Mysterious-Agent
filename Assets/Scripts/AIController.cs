@@ -27,6 +27,8 @@ public class AIController : MonoBehaviour
 
     public Transform[] waypoints;                   //  All the waypoints where the enemy patrols
     int m_CurrentWaypointIndex;                     //  Current waypoint where the enemy is going to
+    public Vector3[] rotations;
+    int m_CurrentRotationpoint;  
 
     public Vector3 playerLastPosition = Vector3.zero;      //  Last position of the player when was near the enemy
     public Vector3 m_PlayerPosition;                       //  Last position of the player when the player is seen by the enemy
@@ -47,10 +49,11 @@ public class AIController : MonoBehaviour
     float nextAttackTime=0f;
     public Player player1;
     bool isDead = false;
+    public bool isMoveable =true;
 
-    
     void Start()
     {
+
         m_PlayerPosition = Vector3.zero;
         m_IsPatrol = true;
         m_CaughtPlayer = false;
@@ -64,7 +67,11 @@ public class AIController : MonoBehaviour
         animator = GetComponent<Animator>();
         navMeshAgent.isStopped = false;
         navMeshAgent.speed = speedWalk;             //  Set the navemesh speed with the normal speed of the enemy
-        navMeshAgent.SetDestination(waypoints[m_CurrentWaypointIndex].position);    //  Set the destination to the first waypoint
+        if (isMoveable)
+        {
+            navMeshAgent.SetDestination(waypoints[m_CurrentWaypointIndex].position);    //  Set the destination to the first waypoint
+        }
+        
         viewMesh = new Mesh();
         viewMesh.name = "View Mesh";
         viewMeshFilter.mesh = viewMesh;
@@ -75,14 +82,36 @@ public class AIController : MonoBehaviour
            mesafe = Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("Player").transform.position);
             EnviromentView();                       //  Check whether or not the player is in the enemy's field of vision
 
-        // if (!m_IsPatrol&&kovala&&!trcontrol.safe)
+       
         if (!m_IsPatrol&&!trcontrol.safe)
         {
             Chasing();
         }
         else
         {
-            Patroling();
+            if (isMoveable)
+            {
+               
+                 Patroling();
+            }
+            else
+            {
+
+
+                 
+                transform.Rotate(rotations[m_CurrentRotationpoint]*Time.deltaTime);
+                if (m_WaitTime <= 0)
+                {
+                    NextRotation();
+                    m_WaitTime = startWaitTime;
+                }
+                else
+                {
+                    m_WaitTime -= Time.deltaTime;
+                }
+
+            }
+           
         }
         if(m_playerInRange)
         {
@@ -219,6 +248,12 @@ public class AIController : MonoBehaviour
         m_CurrentWaypointIndex = (m_CurrentWaypointIndex + 1) % waypoints.Length;
         navMeshAgent.SetDestination(waypoints[m_CurrentWaypointIndex].position);
     }
+        public void NextRotation()
+    {
+         m_CurrentRotationpoint = (m_CurrentRotationpoint + 1) % rotations.Length;
+    }
+    
+
 
     void Stop()
     {
@@ -466,6 +501,7 @@ public class AIController : MonoBehaviour
         Debug.Log("ersg");
         yield return new WaitForSeconds(1f);
         this.gameObject.GetComponent<AIController>().enabled = false;
+        this.gameObject.transform.GetChild(4).gameObject.SetActive(false);
 
     }
     void Animation()
