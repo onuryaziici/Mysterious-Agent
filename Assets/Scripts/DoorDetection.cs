@@ -8,19 +8,18 @@ public class DoorDetection : MonoBehaviour
     [SerializeField] bool openTrigger = false;
     [SerializeField] bool closeTrigger = false;
 
-
-    // Update is called once per frame
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player")&&PlayerPrefs.GetInt("Enemies")==0)
         {
+            GameObject.Find("door 1").GetComponent<MeshCollider>().enabled=false;
             if (openTrigger)
             {
                 anim.Play("DoorOpen", 0, 0.0f);
-                gameObject.SetActive(false);
+                 gameObject.SetActive(false);
             }
 
-            else if (closeTrigger)
+           if (closeTrigger)
             {
                 anim.Play("DoorClosed", 0, 0.0f);
                 gameObject.SetActive(false);

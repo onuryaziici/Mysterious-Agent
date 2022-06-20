@@ -50,6 +50,9 @@ public class AIController : MonoBehaviour
     public Player player1;
     bool isDead = false;
     public bool isMoveable =true;
+     public int numberOfEnemies;
+     public Vector3 enemyfirstlocation;
+     public Vector3 enemyfirstrotation;
 
     void Start()
     {
@@ -71,14 +74,24 @@ public class AIController : MonoBehaviour
         {
             navMeshAgent.SetDestination(waypoints[m_CurrentWaypointIndex].position);    //  Set the destination to the first waypoint
         }
+        else
+        {
+            enemyfirstlocation=transform.position;
+            enemyfirstrotation=transform.eulerAngles;
+            
+        }
         
         viewMesh = new Mesh();
         viewMesh.name = "View Mesh";
         viewMeshFilter.mesh = viewMesh;
+
+        PlayerPrefs.SetInt("Enemies", GameObject.FindGameObjectsWithTag("Enemy").Length);
     }
 
     private void Update()
     {
+        
+           
            mesafe = Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("Player").transform.position);
             EnviromentView();                       //  Check whether or not the player is in the enemy's field of vision
 
@@ -91,15 +104,22 @@ public class AIController : MonoBehaviour
         {
             if (isMoveable)
             {
-               
+
                  Patroling();
             }
             else
             {
+                        
+                navMeshAgent.SetDestination(enemyfirstlocation);
 
-
+                if (navMeshAgent.remainingDistance <= navMeshAgent.stoppingDistance)
+                {
+                    transform.eulerAngles=enemyfirstrotation;
+                    Stop();
+                }   
                  
                 transform.Rotate(rotations[m_CurrentRotationpoint]*Time.deltaTime);
+                
                 if (m_WaitTime <= 0)
                 {
                     NextRotation();
@@ -137,7 +157,7 @@ public class AIController : MonoBehaviour
     }
 
     public void Chasing()
-    {
+    {   
         //  The enemy is chasing the player
         m_PlayerNear = false;                       //  Set false that hte player is near beacause the enemy already sees the player
         playerLastPosition = Vector3.zero;          //  Reset the player near position
@@ -145,6 +165,7 @@ public class AIController : MonoBehaviour
          if (!m_CaughtPlayer)
 
         {
+            
             Move(speedRun);
             navMeshAgent.SetDestination(m_PlayerPosition);          //  set the destination of the enemy to the player location
         }
@@ -152,7 +173,11 @@ public class AIController : MonoBehaviour
         // if (navMeshAgent.remainingDistance <= navMeshAgent.stoppingDistance&&!kovala)
         if (!kovala)    //  Control if the enemy arrive to the player location
         {
-            
+                if (!isMoveable)
+                {
+                    m_IsPatrol = true;
+                    
+                }
             // if (m_WaitTime <= 0 && !m_CaughtPlayer && Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("Player").transform.position) >= 6f)
             if (m_WaitTime <= 0 && !m_CaughtPlayer )
             {
@@ -163,6 +188,7 @@ public class AIController : MonoBehaviour
                 m_TimeToRotate = timeToRotate;
                 m_WaitTime = startWaitTime;
                 navMeshAgent.SetDestination(waypoints[m_CurrentWaypointIndex].position);
+
             }
             else
             {
@@ -295,12 +321,14 @@ public class AIController : MonoBehaviour
 
     public void EnviromentView()
     {
+        
         if (trcontrol.safe)
         { 
             kovala=false;
             m_CaughtPlayer=false;
             m_playerInRange=false;
             m_PlayerNear = false;
+            
         }
          Collider[] playerInRange = Physics.OverlapSphere(transform.position, viewRadius, playerMask);   //  Make an overlap sphere around the enemy to detect the playermask in the view radius
 
@@ -334,15 +362,8 @@ public class AIController : MonoBehaviour
                  * */
                 m_playerInRange = false;                //  Change the sate of chasing
             }
-            if (m_playerInRange)
-            {
-                Stop();
-                if(Time.time >= nextAttackTime && player1.currentHealth > 0)
-                {
-                    Attack();
-                    nextAttackTime = Time.time + 1f / attackRate; 
-                }
-            }
+            StartCoroutine(WaitBeforeAttack());
+            
 
         }
             if (kovala)
@@ -494,10 +515,12 @@ public class AIController : MonoBehaviour
     }
     public IEnumerator TakeDamage()
     {
+
+        PlayerPrefs.SetInt("Enemies", PlayerPrefs.GetInt("Enemies")-1);
+        numberOfEnemies= PlayerPrefs.GetInt("Enemies");
         animator.SetTrigger("Death");
         isDead = true;
         transform.Find("ViewVisualisation").gameObject.SetActive(false);
-        Debug.Log("ersg");
         yield return new WaitForSeconds(1f);
         this.gameObject.GetComponent<AIController>().enabled = false;
         this.gameObject.GetComponent<Rigidbody>().isKinematic = true;

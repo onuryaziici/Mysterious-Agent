@@ -11,6 +11,7 @@ TagManager:
   - Missile
   - TrapObject
   - Attack
+  - Enemy
   layers:
   - Default
   - TransparentFX
