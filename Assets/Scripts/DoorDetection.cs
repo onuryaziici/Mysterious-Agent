@@ -19,7 +19,7 @@ public class DoorDetection : MonoBehaviour
                  gameObject.SetActive(false);
             }
 
-           if (closeTrigger)
+           else if (closeTrigger)
             {
                 anim.Play("DoorClosed", 0, 0.0f);
                 gameObject.SetActive(false);

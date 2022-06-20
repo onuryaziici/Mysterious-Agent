@@ -53,10 +53,10 @@ public class AIController : MonoBehaviour
      public int numberOfEnemies;
      public Vector3 enemyfirstlocation;
      public Vector3 enemyfirstrotation;
-
+     public float delay=1f;
+     bool timer=true;
     void Start()
     {
-
         m_PlayerPosition = Vector3.zero;
         m_IsPatrol = true;
         m_CaughtPlayer = false;
@@ -90,8 +90,6 @@ public class AIController : MonoBehaviour
 
     private void Update()
     {
-        
-           
            mesafe = Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("Player").transform.position);
             EnviromentView();                       //  Check whether or not the player is in the enemy's field of vision
 
@@ -266,8 +264,13 @@ public class AIController : MonoBehaviour
             muzzleFlash.Play();
         }
     }
-    private IEnumerator WaitBeforeAttack()
+    private void WaitBeforeAttack()
     { 
+        if (timer)
+        {
+            nextAttackTime=Time.time+delay;
+            timer=false;
+        }
         
         if (Vector3.Distance(transform.position, player.position) > viewRadius)
         {
@@ -277,17 +280,22 @@ public class AIController : MonoBehaviour
                 * */
             m_playerInRange = false;                //  Change the sate of chasing
             
+            
         }
-        yield return new WaitForSeconds(2f);
+              
         if (m_playerInRange)
             {
-                Stop();
-                if(Time.time >= nextAttackTime && player1.currentHealth > 0)
+                
+                if(Time.time >= nextAttackTime && player1.currentHealth > 0 )
                 {
+                    Stop();
                     Attack();
-                    print("Attack " + Time.time);
-                    nextAttackTime = Time.time + 1f / attackRate; 
                 }
+
+            }
+            else
+            {
+                timer=true;
             }
         
     }
@@ -362,7 +370,7 @@ public class AIController : MonoBehaviour
             Transform player = playerInRange[i].transform;
             Vector3 dirToPlayer = (player.position - transform.position).normalized;
             if (Vector3.Angle(transform.forward, dirToPlayer) < viewAngle / 2)
-            {
+            { 
                 float dstToPlayer = Vector3.Distance(transform.position, player.position);          //  Distance of the enmy and the player
                 if (!Physics.Raycast(transform.position, dirToPlayer, dstToPlayer, obstacleMask)&&!(trcontrol.safe))
                 {
@@ -379,6 +387,10 @@ public class AIController : MonoBehaviour
                     m_playerInRange = false;
                 }
             }
+            else
+            {
+                 m_playerInRange = false;
+            }
             if (Vector3.Distance(transform.position, player.position) > viewRadius &&!kovala)
             {
                 /*
@@ -387,7 +399,7 @@ public class AIController : MonoBehaviour
                  * */
                 m_playerInRange = false;                //  Change the sate of chasing
             }
-            StartCoroutine(WaitBeforeAttack());
+            WaitBeforeAttack();
             
 
         }

@@ -5105,6 +5105,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8347562096598481635}
     - target: {fileID: 8347562094942531260, guid: d142010cf604b2e409da8071a8ba36ea, type: 3}
+      propertyPath: delay
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8347562094942531260, guid: d142010cf604b2e409da8071a8ba36ea, type: 3}
       propertyPath: bullet
       value: 
       objectReference: {fileID: 2067707786190466171, guid: 3e16fe1e040fb1d46906820603db60b3, type: 3}
@@ -5267,6 +5271,10 @@ PrefabInstance:
     - target: {fileID: 9158376255519560687, guid: d142010cf604b2e409da8071a8ba36ea, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9158376255519560687, guid: d142010cf604b2e409da8071a8ba36ea, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 9197859614475779470, guid: d142010cf604b2e409da8071a8ba36ea, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -5993,6 +6001,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1845574650}
     - target: {fileID: 8347562094942531260, guid: d142010cf604b2e409da8071a8ba36ea, type: 3}
+      propertyPath: delay
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8347562094942531260, guid: d142010cf604b2e409da8071a8ba36ea, type: 3}
       propertyPath: bullet
       value: 
       objectReference: {fileID: 2067707786190466171, guid: 3e16fe1e040fb1d46906820603db60b3, type: 3}
@@ -6142,7 +6154,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9158376255519560687, guid: d142010cf604b2e409da8071a8ba36ea, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 9197859614475779470, guid: d142010cf604b2e409da8071a8ba36ea, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -9019,6 +9031,11 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &1557157671 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7239057228271290365, guid: d142010cf604b2e409da8071a8ba36ea, type: 3}
+  m_PrefabInstance: {fileID: 751194055}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1561760753
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9109,7 +9126,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 5779197439840542771, guid: d4ec6ef0f1f51bb4a9eedfd3de693e82, type: 3}
 --- !u!1 &1581380101 stripped
@@ -10056,14 +10073,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fec60c0a5c29b7c4ab999e0d9e12d391, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggerOne: {fileID: 0}
-  triggerTwo: {fileID: 0}
+  triggerOne: {fileID: 7239057227860931315}
+  triggerTwo: {fileID: 1557157671}
   reloadImage: {fileID: 360386573}
   lifeBar: {fileID: 1514717345}
   meshReturnBar: {fileID: 497922812205355111}
   incNumber: {fileID: 1076691764}
-  lifeEnemyOne: {fileID: 0}
-  lifeEnemyTwo: {fileID: 0}
+  lifeEnemyOne: {fileID: 73196318}
+  lifeEnemyTwo: {fileID: 1640028076}
   cloud: {fileID: 805007787}
   lifeBarPlus: {fileID: 1819428543}
   recoveryTime: 10
@@ -12633,6 +12650,11 @@ MonoBehaviour:
   m_FillOrigin: 2
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &7239057227860931315 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7239057228271290365, guid: d142010cf604b2e409da8071a8ba36ea, type: 3}
+  m_PrefabInstance: {fileID: 680162574}
+  m_PrefabAsset: {fileID: 0}
 --- !u!33 &8347562096327140268 stripped
 MeshFilter:
   m_CorrespondingSourceObject: {fileID: 8347562097006237346, guid: d142010cf604b2e409da8071a8ba36ea, type: 3}
