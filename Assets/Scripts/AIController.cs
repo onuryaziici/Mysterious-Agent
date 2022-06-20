@@ -232,7 +232,7 @@ public class AIController : MonoBehaviour
     }
     private void Attack()
     {
-        if(!Player.instance.isDie)
+        if(!Player.instance.isDie && !isDead)
         {
             animator.SetTrigger("Attack");
             player.GetComponent<Player>().TakeDamage(attackDamage);
@@ -497,10 +497,12 @@ public class AIController : MonoBehaviour
     public IEnumerator TakeDamage()
     {
         animator.SetTrigger("Death");
+        isDead = true;
         transform.Find("ViewVisualisation").gameObject.SetActive(false);
         Debug.Log("ersg");
         yield return new WaitForSeconds(1f);
         this.gameObject.GetComponent<AIController>().enabled = false;
+        this.gameObject.GetComponent<Rigidbody>().isKinematic = true;
         this.gameObject.transform.GetChild(4).gameObject.SetActive(false);
 
     }
