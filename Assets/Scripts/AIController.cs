@@ -239,8 +239,6 @@ public class AIController : MonoBehaviour
             Debug.Log("attackDamage");
             muzzleFlash.Play();
         }
-            
-        
     }
 
     public void NextPoint()
@@ -504,7 +502,6 @@ public class AIController : MonoBehaviour
         this.gameObject.GetComponent<AIController>().enabled = false;
         this.gameObject.GetComponent<Rigidbody>().isKinematic = true;
         this.gameObject.transform.GetChild(4).gameObject.SetActive(false);
-
     }
     void Animation()
     {

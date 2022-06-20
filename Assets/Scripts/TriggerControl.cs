@@ -7,8 +7,10 @@ public class TriggerControl : MonoBehaviour
 {
     public static TriggerControl instance = null;
     GameObject triggerObject;
+    public GameObject triggerOne, triggerTwo;
     public Image reloadImage, lifeBar, meshReturnBar;
     public Text incNumber;
+    public Text lifeEnemyOne, lifeEnemyTwo;
     public ParticleSystem cloud;
     public ParticleSystem lifeBarPlus;
     public float recoveryTime;
@@ -78,6 +80,7 @@ public class TriggerControl : MonoBehaviour
         MeshChange();
         MeshPlayer();
         MeshReturn();
+        LifeText();
     }
     void Reload()
     {
@@ -157,6 +160,26 @@ public class TriggerControl : MonoBehaviour
     void Attack()
     {
         anim.SetTrigger("Attack");
-
+    }
+    void LifeText()
+    {
+        if (!gameObject.GetComponent<BoxCollider>().Equals(null))
+        {
+            if (triggerOne.activeInHierarchy)
+            {
+                lifeEnemyOne.gameObject.SetActive(true);
+                lifeEnemyOne.gameObject.transform.rotation = Quaternion.identity;
+            }
+            if (triggerTwo.activeInHierarchy)
+            {
+                lifeEnemyTwo.gameObject.SetActive(true);
+                lifeEnemyTwo.gameObject.transform.rotation = Quaternion.identity;
+            }
+        }
+        else
+        {
+            lifeEnemyOne.gameObject.SetActive(false);
+            lifeEnemyTwo.gameObject.SetActive(false);
+        }
     }
 }
