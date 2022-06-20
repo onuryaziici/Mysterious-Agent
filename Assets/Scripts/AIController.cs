@@ -7,8 +7,8 @@ public class AIController : MonoBehaviour
     NavMeshAgent navMeshAgent;               //  Nav mesh agent component
     public float startWaitTime = 4;                 //  Wait time of every action
     public float timeToRotate = 2;                  //  Wait time when the enemy detect near the player without seeing
-    public float speedWalk = 6;                     //  Walking speed, speed in the nav mesh agent
-    public float speedRun = 9;                      //  Running speed
+    public float speedWalk = 3;                     //  Walking speed, speed in the nav mesh agent
+    public float speedRun = 3;                      //  Running speed
 
     public float viewRadius = 15;                   //  Radius of the enemy view
     public float viewAngle = 90;                    //  Angle of the enemy view
@@ -265,6 +265,31 @@ public class AIController : MonoBehaviour
             Debug.Log("attackDamage");
             muzzleFlash.Play();
         }
+    }
+    private IEnumerator WaitBeforeAttack()
+    { 
+        
+        if (Vector3.Distance(transform.position, player.position) > viewRadius)
+        {
+            /*
+                *  If the player is further than the view radius, then the enemy will no longer keep the player's current position.
+                *  Or the enemy is a safe zone, the enemy will no chase
+                * */
+            m_playerInRange = false;                //  Change the sate of chasing
+            
+        }
+        yield return new WaitForSeconds(2f);
+        if (m_playerInRange)
+            {
+                Stop();
+                if(Time.time >= nextAttackTime && player1.currentHealth > 0)
+                {
+                    Attack();
+                    print("Attack " + Time.time);
+                    nextAttackTime = Time.time + 1f / attackRate; 
+                }
+            }
+        
     }
 
     public void NextPoint()
