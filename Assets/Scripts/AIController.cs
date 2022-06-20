@@ -129,7 +129,7 @@ public class AIController : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.CompareTag("TrapObject"))
+        if(collision.gameObject.CompareTag("TrapObject") && !isDead)
         {
             cloud.Play();
             StartCoroutine(TakeDamage());
