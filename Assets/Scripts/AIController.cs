@@ -149,7 +149,6 @@ public class AIController : MonoBehaviour
         {
             viewMeshFilter.GetComponent<MeshRenderer>().material = fovWhiteMaterial;
         }
-        Animation();
     }
     void LateUpdate()
     {
@@ -575,10 +574,8 @@ public class AIController : MonoBehaviour
         this.gameObject.GetComponent<AIController>().enabled = false;
         this.gameObject.GetComponent<Rigidbody>().isKinematic = true;
         this.gameObject.transform.GetChild(4).gameObject.SetActive(false);
+        this.gameObject.GetComponent<CapsuleCollider>().isTrigger = true;
     }
-    void Animation()
-    {
-        
-    }
+
 
 }

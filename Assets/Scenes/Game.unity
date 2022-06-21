@@ -220,6 +220,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wall_glass (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4cda8f108acb8034485be911446afaae, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cda8f108acb8034485be911446afaae, type: 3}
 --- !u!4 &18242598 stripped
@@ -293,6 +297,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 4cda8f108acb8034485be911446afaae, type: 3}
       propertyPath: m_Name
       value: wall_glass (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4cda8f108acb8034485be911446afaae, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 4cda8f108acb8034485be911446afaae, type: 3}
       propertyPath: m_IsActive
@@ -595,6 +603,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wall_glass
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4cda8f108acb8034485be911446afaae, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cda8f108acb8034485be911446afaae, type: 3}
 --- !u!4 &61747024 stripped
@@ -847,6 +859,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 4cda8f108acb8034485be911446afaae, type: 3}
       propertyPath: m_Name
       value: wall_glass (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4cda8f108acb8034485be911446afaae, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cda8f108acb8034485be911446afaae, type: 3}
@@ -1127,6 +1143,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wall_glass (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4cda8f108acb8034485be911446afaae, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cda8f108acb8034485be911446afaae, type: 3}
 --- !u!4 &95110535 stripped
@@ -1231,6 +1251,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wall_glass (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4cda8f108acb8034485be911446afaae, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cda8f108acb8034485be911446afaae, type: 3}
 --- !u!4 &97041144 stripped
@@ -1304,6 +1328,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 4cda8f108acb8034485be911446afaae, type: 3}
       propertyPath: m_Name
       value: wall_glass (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4cda8f108acb8034485be911446afaae, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cda8f108acb8034485be911446afaae, type: 3}
@@ -1464,6 +1492,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 4cda8f108acb8034485be911446afaae, type: 3}
       propertyPath: m_Name
       value: wall_glass (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4cda8f108acb8034485be911446afaae, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cda8f108acb8034485be911446afaae, type: 3}
@@ -1644,6 +1676,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wall_glass (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4cda8f108acb8034485be911446afaae, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cda8f108acb8034485be911446afaae, type: 3}
 --- !u!4 &168139841 stripped
@@ -1794,6 +1830,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 4cda8f108acb8034485be911446afaae, type: 3}
       propertyPath: m_Name
       value: wall_glass (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4cda8f108acb8034485be911446afaae, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cda8f108acb8034485be911446afaae, type: 3}
@@ -2009,6 +2049,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wall_glass (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4cda8f108acb8034485be911446afaae, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cda8f108acb8034485be911446afaae, type: 3}
 --- !u!4 &222197247 stripped
@@ -2198,6 +2242,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 4cda8f108acb8034485be911446afaae, type: 3}
       propertyPath: m_Name
       value: wall_glass (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4cda8f108acb8034485be911446afaae, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cda8f108acb8034485be911446afaae, type: 3}
@@ -2421,6 +2469,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wall_glass (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4cda8f108acb8034485be911446afaae, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cda8f108acb8034485be911446afaae, type: 3}
 --- !u!4 &335930417 stripped
@@ -2619,6 +2671,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wall_glass (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4cda8f108acb8034485be911446afaae, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cda8f108acb8034485be911446afaae, type: 3}
 --- !u!4 &350782020 stripped
@@ -2701,6 +2757,10 @@ PrefabInstance:
       value: column (1)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 96845ef2db360394d9eff4c080fdd691, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 96845ef2db360394d9eff4c080fdd691, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
@@ -2777,6 +2837,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wall_glass (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4cda8f108acb8034485be911446afaae, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cda8f108acb8034485be911446afaae, type: 3}
 --- !u!4 &355728419 stripped
@@ -2850,6 +2914,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 4cda8f108acb8034485be911446afaae, type: 3}
       propertyPath: m_Name
       value: wall_glass (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4cda8f108acb8034485be911446afaae, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cda8f108acb8034485be911446afaae, type: 3}
@@ -3060,6 +3128,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wall_glass (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4cda8f108acb8034485be911446afaae, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cda8f108acb8034485be911446afaae, type: 3}
 --- !u!4 &392502696 stripped
@@ -3133,6 +3205,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 4cda8f108acb8034485be911446afaae, type: 3}
       propertyPath: m_Name
       value: wall_glass (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4cda8f108acb8034485be911446afaae, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cda8f108acb8034485be911446afaae, type: 3}
@@ -3327,6 +3403,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wall_glass (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4cda8f108acb8034485be911446afaae, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cda8f108acb8034485be911446afaae, type: 3}
 --- !u!4 &440651333 stripped
@@ -3420,6 +3500,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wall_glass (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4cda8f108acb8034485be911446afaae, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cda8f108acb8034485be911446afaae, type: 3}
 --- !u!4 &452461585 stripped
@@ -3493,6 +3577,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 4cda8f108acb8034485be911446afaae, type: 3}
       propertyPath: m_Name
       value: wall_glass (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4cda8f108acb8034485be911446afaae, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cda8f108acb8034485be911446afaae, type: 3}
@@ -3586,6 +3674,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 4cda8f108acb8034485be911446afaae, type: 3}
       propertyPath: m_Name
       value: wall_glass (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4cda8f108acb8034485be911446afaae, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cda8f108acb8034485be911446afaae, type: 3}
@@ -3746,6 +3838,10 @@ PrefabInstance:
       value: column (2)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 96845ef2db360394d9eff4c080fdd691, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 96845ef2db360394d9eff4c080fdd691, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
@@ -3841,6 +3937,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wall_glass (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4cda8f108acb8034485be911446afaae, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cda8f108acb8034485be911446afaae, type: 3}
 --- !u!4 &528086496 stripped
@@ -3933,6 +4033,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 4cda8f108acb8034485be911446afaae, type: 3}
       propertyPath: m_Name
       value: wall_glass (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4cda8f108acb8034485be911446afaae, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cda8f108acb8034485be911446afaae, type: 3}
@@ -4082,6 +4186,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 4cda8f108acb8034485be911446afaae, type: 3}
       propertyPath: m_Name
       value: wall_glass (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4cda8f108acb8034485be911446afaae, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cda8f108acb8034485be911446afaae, type: 3}
@@ -4235,6 +4343,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 4cda8f108acb8034485be911446afaae, type: 3}
       propertyPath: m_Name
       value: wall_glass (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4cda8f108acb8034485be911446afaae, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cda8f108acb8034485be911446afaae, type: 3}
@@ -4396,6 +4508,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wall_glass (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4cda8f108acb8034485be911446afaae, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cda8f108acb8034485be911446afaae, type: 3}
 --- !u!4 &598287116 stripped
@@ -4469,6 +4585,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 4cda8f108acb8034485be911446afaae, type: 3}
       propertyPath: m_Name
       value: wall_glass (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4cda8f108acb8034485be911446afaae, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cda8f108acb8034485be911446afaae, type: 3}
@@ -5232,6 +5352,10 @@ PrefabInstance:
       propertyPath: rotations.Array.data[3].y
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 8347562096204845037, guid: d142010cf604b2e409da8071a8ba36ea, type: 3}
+      propertyPath: ColorModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8381979572663339349, guid: d142010cf604b2e409da8071a8ba36ea, type: 3}
       propertyPath: m_RootOrder
       value: 13
@@ -5553,6 +5677,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 4cda8f108acb8034485be911446afaae, type: 3}
       propertyPath: m_Name
       value: wall_glass (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4cda8f108acb8034485be911446afaae, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cda8f108acb8034485be911446afaae, type: 3}
@@ -6108,6 +6236,10 @@ PrefabInstance:
       propertyPath: waypoints.Array.data[1]
       value: 
       objectReference: {fileID: 2025315017}
+    - target: {fileID: 8347562096204845037, guid: d142010cf604b2e409da8071a8ba36ea, type: 3}
+      propertyPath: ColorModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8381979572663339349, guid: d142010cf604b2e409da8071a8ba36ea, type: 3}
       propertyPath: m_RootOrder
       value: 14
@@ -6323,6 +6455,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wall_glass (29)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4cda8f108acb8034485be911446afaae, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cda8f108acb8034485be911446afaae, type: 3}
 --- !u!4 &773029235 stripped
@@ -6415,6 +6551,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 4cda8f108acb8034485be911446afaae, type: 3}
       propertyPath: m_Name
       value: wall_glass (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4cda8f108acb8034485be911446afaae, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cda8f108acb8034485be911446afaae, type: 3}
@@ -6514,6 +6654,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wall_glass (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4cda8f108acb8034485be911446afaae, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cda8f108acb8034485be911446afaae, type: 3}
 --- !u!4 &807379294 stripped
@@ -6587,6 +6731,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 4cda8f108acb8034485be911446afaae, type: 3}
       propertyPath: m_Name
       value: wall_glass (28)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4cda8f108acb8034485be911446afaae, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cda8f108acb8034485be911446afaae, type: 3}
@@ -6681,6 +6829,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wall_glass (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4cda8f108acb8034485be911446afaae, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cda8f108acb8034485be911446afaae, type: 3}
 --- !u!4 &845065894 stripped
@@ -6716,7 +6868,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 927205284}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Columns
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6827,6 +6979,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wall_glass (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4cda8f108acb8034485be911446afaae, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cda8f108acb8034485be911446afaae, type: 3}
 --- !u!4 &941357330 stripped
@@ -6900,6 +7056,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 4cda8f108acb8034485be911446afaae, type: 3}
       propertyPath: m_Name
       value: wall_glass (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4cda8f108acb8034485be911446afaae, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cda8f108acb8034485be911446afaae, type: 3}
@@ -7071,6 +7231,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 4cda8f108acb8034485be911446afaae, type: 3}
       propertyPath: m_Name
       value: wall_glass (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4cda8f108acb8034485be911446afaae, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cda8f108acb8034485be911446afaae, type: 3}
@@ -7584,6 +7748,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wall_glass (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4cda8f108acb8034485be911446afaae, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cda8f108acb8034485be911446afaae, type: 3}
 --- !u!4 &1154084307 stripped
@@ -7732,6 +7900,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 4cda8f108acb8034485be911446afaae, type: 3}
       propertyPath: m_Name
       value: wall_glass (27)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4cda8f108acb8034485be911446afaae, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cda8f108acb8034485be911446afaae, type: 3}
@@ -7974,6 +8146,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wall_glass (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4cda8f108acb8034485be911446afaae, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cda8f108acb8034485be911446afaae, type: 3}
 --- !u!4 &1276541209 stripped
@@ -8120,7 +8296,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1309125981}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: WallGlassesRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8293,6 +8469,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wall_glass (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4cda8f108acb8034485be911446afaae, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cda8f108acb8034485be911446afaae, type: 3}
 --- !u!4 &1335972281 stripped
@@ -8423,6 +8603,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 4cda8f108acb8034485be911446afaae, type: 3}
       propertyPath: m_Name
       value: wall_glass (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4cda8f108acb8034485be911446afaae, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cda8f108acb8034485be911446afaae, type: 3}
@@ -8766,6 +8950,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 4cda8f108acb8034485be911446afaae, type: 3}
       propertyPath: m_Name
       value: wall_glass (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4cda8f108acb8034485be911446afaae, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cda8f108acb8034485be911446afaae, type: 3}
@@ -9182,6 +9370,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 4cda8f108acb8034485be911446afaae, type: 3}
       propertyPath: m_Name
       value: wall_glass (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4cda8f108acb8034485be911446afaae, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cda8f108acb8034485be911446afaae, type: 3}
@@ -10403,6 +10595,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wall_glass (30)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4cda8f108acb8034485be911446afaae, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cda8f108acb8034485be911446afaae, type: 3}
 --- !u!4 &1658976261 stripped
@@ -10607,6 +10803,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wall_glass (31)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4cda8f108acb8034485be911446afaae, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cda8f108acb8034485be911446afaae, type: 3}
 --- !u!4 &1719778595 stripped
@@ -10719,6 +10919,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wall_glass (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4cda8f108acb8034485be911446afaae, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cda8f108acb8034485be911446afaae, type: 3}
 --- !u!4 &1758020964 stripped
@@ -10792,6 +10996,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 4cda8f108acb8034485be911446afaae, type: 3}
       propertyPath: m_Name
       value: wall_glass (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4cda8f108acb8034485be911446afaae, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cda8f108acb8034485be911446afaae, type: 3}
@@ -10867,6 +11075,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wall_glass (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4cda8f108acb8034485be911446afaae, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cda8f108acb8034485be911446afaae, type: 3}
 --- !u!4 &1782189341 stripped
@@ -10921,7 +11133,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1802475273}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: WallGlassesLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11058,6 +11270,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 4cda8f108acb8034485be911446afaae, type: 3}
       propertyPath: m_Name
       value: wall_glass (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4cda8f108acb8034485be911446afaae, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cda8f108acb8034485be911446afaae, type: 3}
@@ -11198,6 +11414,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wall_glass (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4cda8f108acb8034485be911446afaae, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cda8f108acb8034485be911446afaae, type: 3}
 --- !u!4 &1873667260 stripped
@@ -11259,6 +11479,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 96845ef2db360394d9eff4c080fdd691, type: 3}
       propertyPath: m_Name
       value: column (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 96845ef2db360394d9eff4c080fdd691, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 96845ef2db360394d9eff4c080fdd691, type: 3}
       propertyPath: m_NavMeshLayer
@@ -11425,6 +11649,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 4cda8f108acb8034485be911446afaae, type: 3}
       propertyPath: m_Name
       value: wall_glass (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4cda8f108acb8034485be911446afaae, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cda8f108acb8034485be911446afaae, type: 3}
@@ -11629,6 +11857,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wall_glass (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4cda8f108acb8034485be911446afaae, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cda8f108acb8034485be911446afaae, type: 3}
 --- !u!4 &1910546598 stripped
@@ -11808,6 +12040,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wall_glass (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4cda8f108acb8034485be911446afaae, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cda8f108acb8034485be911446afaae, type: 3}
 --- !u!4 &1911092373 stripped
@@ -11973,6 +12209,10 @@ PrefabInstance:
       value: column (5)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 96845ef2db360394d9eff4c080fdd691, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 96845ef2db360394d9eff4c080fdd691, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
@@ -12088,6 +12328,10 @@ PrefabInstance:
       value: wall_glass (20)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 4cda8f108acb8034485be911446afaae, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4cda8f108acb8034485be911446afaae, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -12164,6 +12408,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 4cda8f108acb8034485be911446afaae, type: 3}
       propertyPath: m_Name
       value: wall_glass
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4cda8f108acb8034485be911446afaae, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cda8f108acb8034485be911446afaae, type: 3}
@@ -12307,6 +12555,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wall_glass (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4cda8f108acb8034485be911446afaae, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cda8f108acb8034485be911446afaae, type: 3}
 --- !u!4 &2055960588 stripped
@@ -12380,6 +12632,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 4cda8f108acb8034485be911446afaae, type: 3}
       propertyPath: m_Name
       value: wall_glass (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4cda8f108acb8034485be911446afaae, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cda8f108acb8034485be911446afaae, type: 3}
