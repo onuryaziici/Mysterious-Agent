@@ -55,6 +55,8 @@ public class AIController : MonoBehaviour
      public Vector3 enemyfirstrotation;
      public float delay=1f;
      bool timer=true;
+     bool isRotate=true;
+     bool Isarrived=true;
     void Start()
     {
         m_PlayerPosition = Vector3.zero;
@@ -100,22 +102,30 @@ public class AIController : MonoBehaviour
         }
         else
         {
+            m_IsPatrol=true;
             if (isMoveable)
             {
-
                  Patroling();
             }
             else
             {
-                        
-                navMeshAgent.SetDestination(enemyfirstlocation);
+                
+                if (!Isarrived)
+                {
+                    Move(speedWalk);
+                    navMeshAgent.SetDestination(enemyfirstlocation);
+                    Isarrived=true;
+                }
+                
+                
 
-                if (navMeshAgent.remainingDistance <= navMeshAgent.stoppingDistance)
+                if (navMeshAgent.remainingDistance <= navMeshAgent.stoppingDistance&&!isRotate)
                 {
                     transform.eulerAngles=enemyfirstrotation;
                     Stop();
+                    isRotate=true;
                 }   
-                 
+                
                 transform.Rotate(rotations[m_CurrentRotationpoint]*Time.deltaTime);
                 
                 if (m_WaitTime <= 0)
@@ -157,6 +167,8 @@ public class AIController : MonoBehaviour
     public void Chasing()
     {   
         //  The enemy is chasing the player
+        Isarrived=false;
+        isRotate=false;
         m_PlayerNear = false;                       //  Set false that hte player is near beacause the enemy already sees the player
         playerLastPosition = Vector3.zero;          //  Reset the player near position
 
@@ -168,15 +180,16 @@ public class AIController : MonoBehaviour
             navMeshAgent.SetDestination(m_PlayerPosition);          //  set the destination of the enemy to the player location
         }
 
-        // if (navMeshAgent.remainingDistance <= navMeshAgent.stoppingDistance&&!kovala)
+       
         if (!kovala)    //  Control if the enemy arrive to the player location
         {
                 if (!isMoveable)
                 {
                     m_IsPatrol = true;
                     
+                    
                 }
-            // if (m_WaitTime <= 0 && !m_CaughtPlayer && Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("Player").transform.position) >= 6f)
+           
             if (m_WaitTime <= 0 && !m_CaughtPlayer )
             {
                 //  Check if the enemy is not near to the player, returns to patrol after the wait time delay
@@ -199,6 +212,7 @@ public class AIController : MonoBehaviour
                     Stop();
                     }
                 m_WaitTime -= Time.deltaTime;
+                
             }
         }
         if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("Player").transform.position) <= 4f)
@@ -260,7 +274,6 @@ public class AIController : MonoBehaviour
         {
             animator.SetTrigger("Attack");
             player.GetComponent<Player>().TakeDamage(attackDamage);
-            Debug.Log("attackDamage");
             muzzleFlash.Play();
         }
     }
@@ -380,10 +393,10 @@ public class AIController : MonoBehaviour
                 }
                 else
                 {
-                    // kovala=false;
                     /*
                      *  If the player is behind a obstacle the player position will not be registered
                      * */
+                    
                     m_playerInRange = false;
                 }
             }
