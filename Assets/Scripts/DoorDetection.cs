@@ -7,6 +7,7 @@ public class DoorDetection : MonoBehaviour
     [SerializeField] Animator anim = null;
     [SerializeField] bool openTrigger = false;
     [SerializeField] bool closeTrigger = false;
+    [SerializeField] Animator finishAnim;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -23,6 +24,7 @@ public class DoorDetection : MonoBehaviour
             {
                 anim.Play("DoorClosed", 0, 0.0f);
                 gameObject.SetActive(false);
+                finishAnim.SetTrigger("Finish");
             }
         }
 
