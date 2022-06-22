@@ -26,7 +26,6 @@ public class LevelManager : MonoBehaviour
     private void Update()
     {
         scoreText.text = "Level: " + score.ToString();
-        Debug.Log(score);
     }
 
 

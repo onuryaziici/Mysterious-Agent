@@ -69,6 +69,7 @@ public class TriggerControl : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Hide"))
         {
+            Debug.Log("MeshChange");
             meshChange = false;
             triggerObject = other.gameObject;
             reloadImage.fillAmount = 0;
@@ -127,6 +128,7 @@ public class TriggerControl : MonoBehaviour
     {
         if (meshReturnBar.fillAmount == 0 && meshReturnBar.gameObject.activeInHierarchy)
         {
+            meshChange = false;
             safe = false;
             if (!gameObject.GetComponent<BoxCollider>().Equals(null))
             {
