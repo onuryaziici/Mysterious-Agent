@@ -7,7 +7,7 @@ public class LevelManager : MonoBehaviour
 {
     public TextMeshProUGUI scoreText;
     public static LevelManager control;
-    public int score;
+    public float score;
    
 
     private void Awake()
