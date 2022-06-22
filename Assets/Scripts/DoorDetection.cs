@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class DoorDetection : MonoBehaviour
 {
@@ -23,11 +25,18 @@ public class DoorDetection : MonoBehaviour
            else if (closeTrigger)
             {
                 anim.Play("DoorClosed", 0, 0.0f);
-                gameObject.SetActive(false);
+                StartCoroutine(WaitForNextScene());
+                //gameObject.SetActive(false);
                 finishAnim.SetTrigger("Finish");
             }
         }
 
+    }
+    IEnumerator WaitForNextScene()
+    {
+        yield return new WaitForSeconds(1.5f);
+        LevelManager.control.score += 1;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
 
