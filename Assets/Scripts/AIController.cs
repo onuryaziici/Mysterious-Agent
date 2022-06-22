@@ -570,11 +570,12 @@ public class AIController : MonoBehaviour
         animator.SetTrigger("Death");
         isDead = true;
         transform.Find("ViewVisualisation").gameObject.SetActive(false);
-        yield return new WaitForSeconds(1f);
         this.gameObject.GetComponent<AIController>().enabled = false;
         this.gameObject.GetComponent<Rigidbody>().isKinematic = true;
         this.gameObject.transform.GetChild(4).gameObject.SetActive(false);
         this.gameObject.GetComponent<CapsuleCollider>().isTrigger = true;
+        Stop();
+        yield return new WaitForSeconds(1f);
     }
 
 
