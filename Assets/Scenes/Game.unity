@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44970727, g: 0.4997756, b: 0.5756324, a: 1}
+  m_IndirectSpecularColor: {r: 0.44970763, g: 0.49977607, b: 0.5756336, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3628,7 +3628,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &473228270
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13299,7 +13299,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 177946978331234987, guid: db85db9740de403409358c0c4fc6022a, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 177946978331234987, guid: db85db9740de403409358c0c4fc6022a, type: 3}
       propertyPath: m_AnchorMin.x
@@ -13307,7 +13307,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 177946978331234987, guid: db85db9740de403409358c0c4fc6022a, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 177946978331234987, guid: db85db9740de403409358c0c4fc6022a, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -13315,7 +13315,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 177946978331234987, guid: db85db9740de403409358c0c4fc6022a, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 212
+      value: -88
       objectReference: {fileID: 0}
     - target: {fileID: 4339971818272914755, guid: db85db9740de403409358c0c4fc6022a, type: 3}
       propertyPath: m_Name
@@ -13412,7 +13412,7 @@ PrefabInstance:
     - target: {fileID: 7888244336346310560, guid: db85db9740de403409358c0c4fc6022a, type: 3}
       propertyPath: m_fontAsset
       value: 
-      objectReference: {fileID: 11400000, guid: d64dc76e624254135b7471c7fd5644cf, type: 2}
+      objectReference: {fileID: 11400000, guid: 737d7a21350fd8146a6d151a2ff8b41d, type: 2}
     - target: {fileID: 7888244336346310560, guid: db85db9740de403409358c0c4fc6022a, type: 3}
       propertyPath: m_fontSizeBase
       value: 20
@@ -13420,14 +13420,14 @@ PrefabInstance:
     - target: {fileID: 7888244336346310560, guid: db85db9740de403409358c0c4fc6022a, type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: -4600244977325667205, guid: d64dc76e624254135b7471c7fd5644cf, type: 2}
+      objectReference: {fileID: 3213250482300823942, guid: 737d7a21350fd8146a6d151a2ff8b41d, type: 2}
     - target: {fileID: 7888244336346310560, guid: db85db9740de403409358c0c4fc6022a, type: 3}
       propertyPath: m_VerticalAlignment
-      value: 256
+      value: 512
       objectReference: {fileID: 0}
     - target: {fileID: 7888244336346310560, guid: db85db9740de403409358c0c4fc6022a, type: 3}
       propertyPath: m_HorizontalAlignment
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8564210842052094262, guid: db85db9740de403409358c0c4fc6022a, type: 3}
       propertyPath: m_UiScaleMode
