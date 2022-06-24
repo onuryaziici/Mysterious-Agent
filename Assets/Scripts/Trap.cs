@@ -10,7 +10,7 @@ public class Trap : MonoBehaviour
     float posY = 1;
     public void Start()
     {
-       trapObject=Instantiate(trapObjects[Random.Range(0,3)],new Vector3(0.75f,7,13), Quaternion.identity);
+       trapObject=Instantiate(trapObjects[Random.Range(0,3)],new Vector3(0.75f,7,gameObject.transform.position.z + 18), Quaternion.identity);
         trapObject.tag = "TrapObject";
         trapObject.transform.DetachChildren();
     }

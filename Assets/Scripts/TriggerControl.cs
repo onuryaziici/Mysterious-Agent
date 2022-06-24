@@ -62,7 +62,7 @@ public class TriggerControl : MonoBehaviour
             meshReturnBar.gameObject.SetActive(false);
             Attack();
             StartCoroutine(other.gameObject.GetComponentInParent<AIController>().TakeDamage());
-            
+            meshChange = false;
         }
     }
     private void OnTriggerExit(Collider other)

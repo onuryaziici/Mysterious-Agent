@@ -10,10 +10,11 @@ public class DoorDetection : MonoBehaviour
     [SerializeField] bool openTrigger = false;
     [SerializeField] bool closeTrigger = false;
     [SerializeField] Animator finishAnim;
+    [SerializeField] int openEnemyCount, closeEnemyCount;
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player")&&PlayerPrefs.GetInt("Enemies")==0)
+        if (other.gameObject.CompareTag("Player") && PlayerPrefs.GetInt("Enemies")==openEnemyCount)
         {
             GameObject.Find("door 1").GetComponent<MeshCollider>().enabled=false;
             if (openTrigger)
@@ -22,7 +23,7 @@ public class DoorDetection : MonoBehaviour
                  gameObject.SetActive(false);
             }
 
-           else if (closeTrigger)
+           else if (closeTrigger && PlayerPrefs.GetInt("Enemies") == closeEnemyCount)
             {
                 anim.Play("DoorClosed", 0, 0.0f);
                 StartCoroutine(WaitForNextScene());

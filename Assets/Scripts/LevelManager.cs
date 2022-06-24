@@ -25,7 +25,14 @@ public class LevelManager : MonoBehaviour
     }
     private void Update()
     {
-        scoreText.text = "Level: " + score.ToString();
+        if (score - 1 == 0)
+        {
+            scoreText.text = "Intro";
+        }
+        else
+        {
+            scoreText.text = "Level: " + (score - 1).ToString();
+        }
     }
 
 
