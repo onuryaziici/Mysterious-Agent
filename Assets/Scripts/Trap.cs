@@ -8,9 +8,10 @@ public class Trap : MonoBehaviour
     public GameObject trapObject;
     bool trap = false;
     float posY = 1;
+    [SerializeField] Transform trapObjectTransform;
     public void Start()
     {
-       trapObject=Instantiate(trapObjects[Random.Range(0,3)],new Vector3(0.75f,7,gameObject.transform.position.z + 18), Quaternion.identity);
+       trapObject=Instantiate(trapObjects[Random.Range(0,3)],new Vector3(trapObjectTransform.position.x,7,trapObjectTransform.position.z), Quaternion.identity);
         trapObject.tag = "TrapObject";
         trapObject.transform.DetachChildren();
     }
