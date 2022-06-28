@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44970727, g: 0.4997756, b: 0.5756324, a: 1}
+  m_IndirectSpecularColor: {r: 0.44970763, g: 0.49977607, b: 0.5756336, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5979,7 +5979,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &473228270
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12089,6 +12089,7 @@ MonoBehaviour:
   - {fileID: 4849765833651229808, guid: 00fa0e07a6067494f99e997ce44970de, type: 3}
   - {fileID: 9124657522788304990, guid: ef3528213d5c36e44b5249f0f7508063, type: 3}
   trapObject: {fileID: 0}
+  trapObjectTransform: {fileID: 8381979572000242779}
 --- !u!65 &974151625
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22958,6 +22959,7 @@ MonoBehaviour:
   - {fileID: 4849765833651229808, guid: 00fa0e07a6067494f99e997ce44970de, type: 3}
   - {fileID: 9124657522788304990, guid: ef3528213d5c36e44b5249f0f7508063, type: 3}
   trapObject: {fileID: 0}
+  trapObjectTransform: {fileID: 2071859843}
 --- !u!65 &1932635213
 BoxCollider:
   m_ObjectHideFlags: 0
