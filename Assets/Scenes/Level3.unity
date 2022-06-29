@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44970763, g: 0.49977607, b: 0.5756336, a: 1}
+  m_IndirectSpecularColor: {r: 0.44970727, g: 0.4997756, b: 0.5756324, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1829,7 +1829,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 2.52, y: 1, z: 1}
-  m_Center: {x: -1.06, y: 0, z: 0}
+  m_Center: {x: -1.06, y: 0, z: 0.5}
 --- !u!1 &156202614
 GameObject:
   m_ObjectHideFlags: 0
@@ -4424,7 +4424,7 @@ MonoBehaviour:
   openTrigger: 1
   closeTrigger: 0
   finishAnim: {fileID: 473228274}
-  openEnemyCount: 2
+  openEnemyCount: 3
   closeEnemyCount: 0
 --- !u!65 &361951790
 BoxCollider:
@@ -4438,7 +4438,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 2.13, y: 1, z: 1}
-  m_Center: {x: -0.39, y: 0, z: 0}
+  m_Center: {x: -0.39, y: 0, z: 0.5}
 --- !u!1001 &381558173
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6163,7 +6163,7 @@ Transform:
   - {fileID: 629910250}
   - {fileID: 916386048}
   m_Father: {fileID: 1755759231}
-  m_RootOrder: 6
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &545430058
 PrefabInstance:
@@ -6522,7 +6522,7 @@ MonoBehaviour:
   openTrigger: 0
   closeTrigger: 1
   finishAnim: {fileID: 473228274}
-  openEnemyCount: 2
+  openEnemyCount: 3
   closeEnemyCount: 0
 --- !u!65 &575256682
 BoxCollider:
@@ -6536,7 +6536,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 2.52, y: 1, z: 1}
-  m_Center: {x: -1.06, y: 0, z: 0}
+  m_Center: {x: -1.06, y: 0, z: 0.5}
 --- !u!1001 &577447996
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7245,7 +7245,7 @@ MonoBehaviour:
   openTrigger: 1
   closeTrigger: 0
   finishAnim: {fileID: 473228274}
-  openEnemyCount: 2
+  openEnemyCount: 3
   closeEnemyCount: 0
 --- !u!65 &649407299
 BoxCollider:
@@ -7259,7 +7259,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 2.13, y: 1, z: 1}
-  m_Center: {x: -0.39, y: 0, z: 0}
+  m_Center: {x: -0.39, y: 0, z: 0.5}
 --- !u!1 &657211993
 GameObject:
   m_ObjectHideFlags: 0
@@ -9174,7 +9174,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 2.52, y: 1, z: 1}
-  m_Center: {x: -1.06, y: 0, z: 0}
+  m_Center: {x: -1.06, y: 0, z: 0.5}
 --- !u!1001 &739756320
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10734,7 +10734,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 2.13, y: 1, z: 1}
-  m_Center: {x: -0.39, y: 0, z: 0}
+  m_Center: {x: -0.39, y: 0, z: 0.5}
 --- !u!1 &872212149 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 4cda8f108acb8034485be911446afaae, type: 3}
@@ -11487,7 +11487,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2062c8c652a849e4faed69a785ec4825, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1624337444}
 --- !u!1001 &965186413
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19397,12 +19396,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   triggerOne: {fileID: 7239057227860931315}
   triggerTwo: {fileID: 1557157671}
+  triggerThree: {fileID: 0}
+  triggerFour: {fileID: 0}
+  triggerFive: {fileID: 0}
+  triggerSix: {fileID: 0}
+  triggerSeven: {fileID: 0}
   reloadImage: {fileID: 360386573}
   lifeBar: {fileID: 1514717345}
   meshReturnBar: {fileID: 497922812205355111}
   incNumber: {fileID: 1076691764}
   lifeEnemyOne: {fileID: 73196318}
   lifeEnemyTwo: {fileID: 1640028076}
+  lifeEnemyThree: {fileID: 0}
+  lifeEnemyFour: {fileID: 0}
+  lifeEnemyFive: {fileID: 0}
+  lifeEnemySix: {fileID: 0}
+  lifeEnemySeven: {fileID: 0}
   cloud: {fileID: 805007787}
   lifeBarPlus: {fileID: 1819428543}
   recoveryTime: 10
@@ -20197,7 +20206,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 2.13, y: 1, z: 1}
-  m_Center: {x: -0.39, y: 0, z: 0}
+  m_Center: {x: -0.39, y: 0, z: 0.5}
 --- !u!1 &1692843413 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 96845ef2db360394d9eff4c080fdd691, type: 3}
@@ -20774,12 +20783,12 @@ Transform:
   - {fileID: 1932635210}
   - {fileID: 894913407}
   - {fileID: 801804615}
+  - {fileID: 543338504}
   - {fileID: 2071859843}
   - {fileID: 1367422000}
-  - {fileID: 543338504}
-  - {fileID: 2081191513}
-  - {fileID: 1478633837}
   - {fileID: 1354721541}
+  - {fileID: 1478633837}
+  - {fileID: 2081191513}
   - {fileID: 1613119140}
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -22140,7 +22149,7 @@ MonoBehaviour:
   openTrigger: 0
   closeTrigger: 1
   finishAnim: {fileID: 473228274}
-  openEnemyCount: 2
+  openEnemyCount: 3
   closeEnemyCount: 0
 --- !u!65 &1868173631
 BoxCollider:
@@ -22154,7 +22163,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 2.52, y: 1, z: 1}
-  m_Center: {x: -1.06, y: 0, z: 0}
+  m_Center: {x: -1.06, y: 0, z: 0.5}
 --- !u!1001 &1873667259
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25274,6 +25283,14 @@ PrefabInstance:
       propertyPath: scoreText
       value: 
       objectReference: {fileID: 5925297539880676316}
+    - target: {fileID: 574826522452105753, guid: 8ec0308a8662f1447a330e996269a81b, type: 3}
+      propertyPath: levels.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 574826522452105753, guid: 8ec0308a8662f1447a330e996269a81b, type: 3}
+      propertyPath: levels.Array.data[0]
+      value: 
+      objectReference: {fileID: 5677652905104227987, guid: 3c0e585253baba241af9cd33acc2f500, type: 3}
     - target: {fileID: 1300367646230538820, guid: 8ec0308a8662f1447a330e996269a81b, type: 3}
       propertyPath: m_RootOrder
       value: 9

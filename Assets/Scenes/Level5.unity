@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44970763, g: 0.49977607, b: 0.5756336, a: 1}
+  m_IndirectSpecularColor: {r: 0.44970727, g: 0.4997756, b: 0.5756324, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1855,7 +1855,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 2.52, y: 1, z: 1}
-  m_Center: {x: -1.06, y: 0, z: 0}
+  m_Center: {x: -1.06, y: 0, z: 0.5}
 --- !u!1 &156202614
 GameObject:
   m_ObjectHideFlags: 0
@@ -4738,7 +4738,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 2.13, y: 1, z: 1}
-  m_Center: {x: -0.39, y: 0, z: 0}
+  m_Center: {x: -0.39, y: 0, z: 0.5}
 --- !u!1001 &368317330
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6993,7 +6993,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 2.52, y: 1, z: 1}
-  m_Center: {x: -1.06, y: 0, z: 0}
+  m_Center: {x: -1.06, y: 0, z: 0.5}
 --- !u!1001 &577447996
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7751,7 +7751,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 2.13, y: 1, z: 1}
-  m_Center: {x: -0.39, y: 0, z: 0}
+  m_Center: {x: -0.39, y: 0, z: 0.5}
 --- !u!1 &657211993
 GameObject:
   m_ObjectHideFlags: 0
@@ -9809,7 +9809,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 2.52, y: 1, z: 1}
-  m_Center: {x: -1.06, y: 0, z: 0}
+  m_Center: {x: -1.06, y: 0, z: 0.5}
 --- !u!1001 &739756320
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10891,7 +10891,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 2.13, y: 1, z: 1}
-  m_Center: {x: -0.39, y: 0, z: 0}
+  m_Center: {x: -0.39, y: 0, z: 0.5}
 --- !u!1 &872212149 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 4cda8f108acb8034485be911446afaae, type: 3}
@@ -11877,7 +11877,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2062c8c652a849e4faed69a785ec4825, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1624337444}
 --- !u!1001 &965186413
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22741,7 +22740,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 2.13, y: 1, z: 1}
-  m_Center: {x: -0.39, y: 0, z: 0}
+  m_Center: {x: -0.39, y: 0, z: 0.5}
 --- !u!1001 &1690689919
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25754,7 +25753,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 2.52, y: 1, z: 1}
-  m_Center: {x: -1.06, y: 0, z: 0}
+  m_Center: {x: -1.06, y: 0, z: 0.5}
 --- !u!1001 &1873667259
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29778,6 +29777,14 @@ PrefabInstance:
       propertyPath: scoreText
       value: 
       objectReference: {fileID: 5925297539880676316}
+    - target: {fileID: 574826522452105753, guid: 8ec0308a8662f1447a330e996269a81b, type: 3}
+      propertyPath: levels.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 574826522452105753, guid: 8ec0308a8662f1447a330e996269a81b, type: 3}
+      propertyPath: levels.Array.data[0]
+      value: 
+      objectReference: {fileID: 5677652905104227987, guid: 3c0e585253baba241af9cd33acc2f500, type: 3}
     - target: {fileID: 1300367646230538820, guid: 8ec0308a8662f1447a330e996269a81b, type: 3}
       propertyPath: m_RootOrder
       value: 9

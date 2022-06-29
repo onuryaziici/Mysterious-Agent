@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class JoystickControl : MonoBehaviour
 {
@@ -13,21 +14,26 @@ public class JoystickControl : MonoBehaviour
     float turnSpeed = 5;
 
     public Animator playerAnim;
+
+    bool move;
     void Awake()
     {
         if (instance == null)
         {
             instance = this;
         }
-        //playerAnim = GetComponent<Animator>();
+    }
+    private void Start()
+    {
+        move = true;
     }
     void FixedUpdate()
     {
-        if (Input.GetButton("Fire1"))
+        MoveLimit();
+        if (Input.GetButton("Fire1") && move)
         {
             Joystick();
         }
-        //AnimatorControl();
     }
     void Joystick()
     {
@@ -39,15 +45,25 @@ public class JoystickControl : MonoBehaviour
         Vector3 direction = Vector3.forward * vertical + Vector3.right * horizontal;
         transform.rotation = Quaternion.Slerp(a: transform.rotation, b: Quaternion.LookRotation(direction), t: turnSpeed * Time.deltaTime);
     }
-    void AnimatorControl()
+    void MoveLimit()
     {
-        if (background.gameObject.activeInHierarchy)
+        if (SceneManager.GetActiveScene().buildIndex == 0)
         {
-            playerAnim.SetFloat("Walk", 2);
+            if (transform.position.z > 19)
+            {
+                move = false;
+            }
+            //float forward = Mathf.Clamp(transform.position.z, -21, 19);
+            //transform.position = new Vector3(transform.position.x, transform.position.y, forward);
         }
         else
         {
-            playerAnim.SetFloat("Walk", 1);
+            if (transform.position.z > 61)
+            {
+                move = false;
+            }
+            //float forwardPos = Mathf.Clamp(transform.position.z, -21, 61);
+            //transform.position = new Vector3(transform.position.x, transform.position.y, forwardPos);
         }
     }
 }

@@ -12,6 +12,7 @@ TagManager:
   - TrapObject
   - Attack
   - Enemy
+  - LevelOne
   layers:
   - Default
   - TransparentFX

@@ -614,6 +614,14 @@ PrefabInstance:
       propertyPath: scoreText
       value: 
       objectReference: {fileID: 242721283}
+    - target: {fileID: 574826522452105753, guid: 8ec0308a8662f1447a330e996269a81b, type: 3}
+      propertyPath: levels.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 574826522452105753, guid: 8ec0308a8662f1447a330e996269a81b, type: 3}
+      propertyPath: levels.Array.data[0]
+      value: 
+      objectReference: {fileID: 5677652905104227987, guid: 3c0e585253baba241af9cd33acc2f500, type: 3}
     - target: {fileID: 1300367646230538820, guid: 8ec0308a8662f1447a330e996269a81b, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -2049,7 +2057,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 2.13, y: 1, z: 1}
-  m_Center: {x: -0.39, y: 0, z: 0}
+  m_Center: {x: -0.39, y: 0, z: 0.5}
 --- !u!1 &400062116 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 4cda8f108acb8034485be911446afaae, type: 3}
@@ -3064,7 +3072,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 2.52, y: 1, z: 1}
-  m_Center: {x: -1.06, y: 0, z: 0}
+  m_Center: {x: -1.06, y: 0, z: 0.5}
 --- !u!1001 &620703215
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4453,7 +4461,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2062c8c652a849e4faed69a785ec4825, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1493073441}
 --- !u!81 &806866415
 AudioListener:
   m_ObjectHideFlags: 0
@@ -5356,6 +5363,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -0.00000007629394
       objectReference: {fileID: 0}
+    - target: {fileID: -4054006368842255617, guid: d4ec6ef0f1f51bb4a9eedfd3de693e82, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d4ec6ef0f1f51bb4a9eedfd3de693e82, type: 3}
       propertyPath: m_Name
       value: door_revize
@@ -5367,6 +5378,10 @@ PrefabInstance:
     - target: {fileID: 2541840859129327162, guid: d4ec6ef0f1f51bb4a9eedfd3de693e82, type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.00000007629394
+      objectReference: {fileID: 0}
+    - target: {fileID: 2834452149904478141, guid: d4ec6ef0f1f51bb4a9eedfd3de693e82, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4ec6ef0f1f51bb4a9eedfd3de693e82, type: 3}
@@ -10248,12 +10263,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   triggerOne: {fileID: 857640730}
   triggerTwo: {fileID: 1662591072}
+  triggerThree: {fileID: 0}
+  triggerFour: {fileID: 0}
+  triggerFive: {fileID: 0}
+  triggerSix: {fileID: 0}
+  triggerSeven: {fileID: 0}
   reloadImage: {fileID: 1763334676}
   lifeBar: {fileID: 572499503}
   meshReturnBar: {fileID: 1828534350}
   incNumber: {fileID: 1585772402}
   lifeEnemyOne: {fileID: 1101911622}
   lifeEnemyTwo: {fileID: 41423612}
+  lifeEnemyThree: {fileID: 0}
+  lifeEnemyFour: {fileID: 0}
+  lifeEnemyFive: {fileID: 0}
+  lifeEnemySix: {fileID: 0}
+  lifeEnemySeven: {fileID: 0}
   cloud: {fileID: 1547039284}
   lifeBarPlus: {fileID: 989491069}
   recoveryTime: 10
@@ -11038,7 +11063,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 2.13, y: 1, z: 1}
-  m_Center: {x: -0.39, y: 0, z: 0}
+  m_Center: {x: -0.39, y: 0, z: 0.5}
 --- !u!4 &1694045296 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8381979572663339349, guid: d142010cf604b2e409da8071a8ba36ea, type: 3}
@@ -12295,7 +12320,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &1909475844
 Animator:
   serializedVersion: 3
@@ -12886,7 +12911,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 2.52, y: 1, z: 1}
-  m_Center: {x: -1.06, y: 0, z: 0}
+  m_Center: {x: -1.06, y: 0, z: 0.5}
 --- !u!224 &2030314480 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8135886326569738822, guid: 56fae09712773584fb63896d473a98ee, type: 3}

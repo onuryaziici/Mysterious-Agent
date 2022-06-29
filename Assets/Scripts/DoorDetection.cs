@@ -31,13 +31,26 @@ public class DoorDetection : MonoBehaviour
                 finishAnim.SetTrigger("Finish");
             }
         }
-
     }
     IEnumerator WaitForNextScene()
     {
         yield return new WaitForSeconds(1.5f);
-        LevelManager.control.score += 0.5f;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        //LevelManager.control.score += 0.5f;
+        //PlayerPrefs.SetFloat("Score", LevelManager.control.score);
+        LevelManager.control.ScoreInc();
+        //float score = PlayerPrefs.GetFloat("Score");
+        //score++;
+        //if (LevelManager.control.score > 0 && LevelManager.control.score < 6)
+        //{
+        //    //for (int i = 1; i < 6; i++)
+        //    //{
+        //    //    if (SceneManager.GetActiveScene().buildIndex != i)
+        //    //    {
+        //    //        SceneManager.LoadScene(Random.Range(i, 5));
+        //    //    }
+        //    //}
+        //}
+        LevelManager.control.LevelManage();
     }
 
 
