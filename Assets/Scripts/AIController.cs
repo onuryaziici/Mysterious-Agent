@@ -575,9 +575,9 @@ public class AIController : MonoBehaviour
         this.gameObject.transform.GetChild(4).gameObject.SetActive(false);
         this.gameObject.GetComponent<CapsuleCollider>().isTrigger = true;
         Stop();
-        yield return new WaitForSeconds(1f);
         AgentCount.instance.agentCount--;
         AgentCount.instance.agentCountText.text = "" + AgentCount.instance.agentCount;
+        yield return new WaitForSeconds(1f);
     }
 
 

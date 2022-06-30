@@ -18,9 +18,9 @@ public class AgentCount : MonoBehaviour
     }
     void Update()
     {
-        if (agentCount == 0)
-        {
-            agentCountText.text = "" + newAgentCount;
-        }
+        //if (agentCount == 0)
+        //{
+        //    agentCountText.text = "" + newAgentCount;
+        //}
     }
 }

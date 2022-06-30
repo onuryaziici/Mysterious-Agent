@@ -21,6 +21,10 @@ public class DoorDetection : MonoBehaviour
             {
                 anim.Play("DoorOpen", 0, 0.0f);
                  gameObject.SetActive(false);
+                if (AgentCount.instance.agentCount == 0)
+                {
+                    AgentCount.instance.agentCountText.text = "" + AgentCount.instance.newAgentCount;
+                }
             }
 
            else if (closeTrigger && PlayerPrefs.GetInt("Enemies") == closeEnemyCount)
