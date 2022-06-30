@@ -23,7 +23,8 @@ public class DoorDetection : MonoBehaviour
                  gameObject.SetActive(false);
                 if (AgentCount.instance.agentCount == 0)
                 {
-                    AgentCount.instance.agentCountText.text = "" + AgentCount.instance.newAgentCount;
+                    AgentCount.instance.agentCount = AgentCount.instance.newAgentCount;
+                    AgentCount.instance.agentCountText.text = "" + AgentCount.instance.agentCount;
                 }
             }
 
