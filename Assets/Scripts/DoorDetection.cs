@@ -11,6 +11,11 @@ public class DoorDetection : MonoBehaviour
     [SerializeField] bool closeTrigger = false;
     [SerializeField] Animator finishAnim;
     [SerializeField] int openEnemyCount, closeEnemyCount;
+    GameObject player;
+    private void Awake()
+    {
+        player = GameObject.Find("Player");
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -21,7 +26,7 @@ public class DoorDetection : MonoBehaviour
             {
                 anim.Play("DoorOpen", 0, 0.0f);
                  gameObject.SetActive(false);
-                if (AgentCount.instance.agentCount == 0)
+                if (AgentCount.instance.agentCount == 0 && player.transform.position.z < 25)
                 {
                     AgentCount.instance.agentCount = AgentCount.instance.newAgentCount;
                     AgentCount.instance.agentCountText.text = "" + AgentCount.instance.agentCount;
@@ -40,21 +45,7 @@ public class DoorDetection : MonoBehaviour
     IEnumerator WaitForNextScene()
     {
         yield return new WaitForSeconds(1.5f);
-        //LevelManager.control.score += 0.5f;
-        //PlayerPrefs.SetFloat("Score", LevelManager.control.score);
         LevelManager.control.ScoreInc();
-        //float score = PlayerPrefs.GetFloat("Score");
-        //score++;
-        //if (LevelManager.control.score > 0 && LevelManager.control.score < 6)
-        //{
-        //    //for (int i = 1; i < 6; i++)
-        //    //{
-        //    //    if (SceneManager.GetActiveScene().buildIndex != i)
-        //    //    {
-        //    //        SceneManager.LoadScene(Random.Range(i, 5));
-        //    //    }
-        //    //}
-        //}
         LevelManager.control.LevelManage();
     }
 
