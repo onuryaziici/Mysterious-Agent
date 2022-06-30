@@ -166,62 +166,94 @@ public class TriggerControl : MonoBehaviour
     }
     void LifeText()
     {
-        if (!gameObject.GetComponent<BoxCollider>().Equals(null))
-        {
-            if (triggerOne != null && lifeEnemyOne.gameObject != null && triggerOne.activeInHierarchy)
-            {
-                lifeEnemyOne.gameObject.SetActive(true);
-                lifeEnemyOne.gameObject.transform.rotation = Quaternion.identity;
-            }
-            if (triggerTwo != null && lifeEnemyTwo.gameObject != null && triggerTwo.activeInHierarchy)
-            {
-                lifeEnemyTwo.gameObject.SetActive(true);
-                lifeEnemyTwo.gameObject.transform.rotation = Quaternion.identity;
-            }
-            if (triggerThree != null && lifeEnemyThree.gameObject != null && triggerThree.activeInHierarchy)
-            {
-                lifeEnemyThree.gameObject.SetActive(true);
-                lifeEnemyThree.gameObject.transform.rotation = Quaternion.identity;
-            }
-            if (triggerFour != null && lifeEnemyFour.gameObject != null && triggerFour.activeInHierarchy)
-            {
-                lifeEnemyFour.gameObject.SetActive(true);
-                lifeEnemyFour.gameObject.transform.rotation = Quaternion.identity;
-            }
-            if (triggerFive != null && lifeEnemyFive.gameObject != null && triggerFive.activeInHierarchy)
-            {
-                lifeEnemyFive.gameObject.SetActive(true);
-                lifeEnemyFive.gameObject.transform.rotation = Quaternion.identity;
-            }
-            if (triggerSix != null && lifeEnemySix.gameObject != null && triggerSix.activeInHierarchy)
-            {
-                lifeEnemySix.gameObject.SetActive(true);
-                lifeEnemySix.gameObject.transform.rotation = Quaternion.identity;
-            }
-            if (triggerSeven != null && lifeEnemySeven.gameObject != null && triggerSeven.activeInHierarchy)
-            {
-                lifeEnemySeven.gameObject.SetActive(true);
-                lifeEnemySeven.gameObject.transform.rotation = Quaternion.identity;
-            }
+        //if (!gameObject.GetComponent<BoxCollider>().Equals(null))
+        //{
+        //    if (triggerOne != null && lifeEnemyOne.gameObject != null && triggerOne.activeInHierarchy)
+        //    {
+        //        lifeEnemyOne.gameObject.SetActive(true);
+        //        lifeEnemyOne.gameObject.transform.rotation = Quaternion.identity;
+        //    }
+        //    if (triggerTwo != null && lifeEnemyTwo.gameObject != null && triggerTwo.activeInHierarchy)
+        //    {
+        //        lifeEnemyTwo.gameObject.SetActive(true);
+        //        lifeEnemyTwo.gameObject.transform.rotation = Quaternion.identity;
+        //    }
+        //    if (triggerThree != null && lifeEnemyThree.gameObject != null && triggerThree.activeInHierarchy)
+        //    {
+        //        lifeEnemyThree.gameObject.SetActive(true);
+        //        lifeEnemyThree.gameObject.transform.rotation = Quaternion.identity;
+        //    }
+        //    if (triggerFour != null && lifeEnemyFour.gameObject != null && triggerFour.activeInHierarchy)
+        //    {
+        //        lifeEnemyFour.gameObject.SetActive(true);
+        //        lifeEnemyFour.gameObject.transform.rotation = Quaternion.identity;
+        //    }
+        //    if (triggerFive != null && lifeEnemyFive.gameObject != null && triggerFive.activeInHierarchy)
+        //    {
+        //        lifeEnemyFive.gameObject.SetActive(true);
+        //        lifeEnemyFive.gameObject.transform.rotation = Quaternion.identity;
+        //    }
+        //    if (triggerSix != null && lifeEnemySix.gameObject != null && triggerSix.activeInHierarchy)
+        //    {
+        //        lifeEnemySix.gameObject.SetActive(true);
+        //        lifeEnemySix.gameObject.transform.rotation = Quaternion.identity;
+        //    }
+        //    if (triggerSeven != null && lifeEnemySeven.gameObject != null && triggerSeven.activeInHierarchy)
+        //    {
+        //        lifeEnemySeven.gameObject.SetActive(true);
+        //        lifeEnemySeven.gameObject.transform.rotation = Quaternion.identity;
+        //    }
             
-        }
-        else
-        {
-            //lifeEnemyOne.gameObject.SetActive(false);
-            //lifeEnemyTwo.gameObject.SetActive(false);
-            //lifeEnemyThree.gameObject.SetActive(false);
-            //lifeEnemyFour.gameObject.SetActive(false);
-            //lifeEnemyFive.gameObject.SetActive(false);
-            //lifeEnemySix.gameObject.SetActive(false);
-            //lifeEnemySeven.gameObject.SetActive(false);
-            Life(lifeEnemyOne);
-            Life(lifeEnemyTwo);
-            Life(lifeEnemyThree);
-            Life(lifeEnemyFour);
-            Life(lifeEnemyFive);
-            Life(lifeEnemySix);
-            Life(lifeEnemySeven);
-        }
+        //}
+        //else
+        //{
+        //    //lifeEnemyOne.gameObject.SetActive(false);
+        //    //lifeEnemyTwo.gameObject.SetActive(false);
+        //    //lifeEnemyThree.gameObject.SetActive(false);
+        //    //lifeEnemyFour.gameObject.SetActive(false);
+        //    //lifeEnemyFive.gameObject.SetActive(false);
+        //    //lifeEnemySix.gameObject.SetActive(false);
+        //    //lifeEnemySeven.gameObject.SetActive(false);
+        //    Life(lifeEnemyOne);
+        //    Life(lifeEnemyTwo);
+        //    Life(lifeEnemyThree);
+        //    Life(lifeEnemyFour);
+        //    Life(lifeEnemyFive);
+        //    Life(lifeEnemySix);
+        //    Life(lifeEnemySeven);
+        //}
+        //if (!gameObject.GetComponent<BoxCollider>().Equals(null))
+        //{
+        //    if (AIController.ai.isDead)
+        //    {
+        //        Debug.Log("fjj");
+        //        AIController.ai.kill.gameObject.SetActive(false);
+        //    }
+        //    else
+        //    {
+        //        Debug.Log("ser");
+        //        AIController.ai.kill.gameObject.SetActive(true);
+        //    }
+        //}
+        //else
+        //{
+        //    AIController.ai.kill.gameObject.SetActive(false);
+        //}
+        //if (AIController.ai.isDead)
+        //{
+        //    gameObject.transform.GetChild(6).gameObject.SetActive(false);
+        //}
+        //else
+        //{
+        //    if (!gameObject.GetComponent<BoxCollider>().Equals(null))
+        //    {
+        //        gameObject.transform.GetChild(6).gameObject.SetActive(true);
+        //    }
+        //    else
+        //    {
+        //        gameObject.transform.GetChild(6).gameObject.SetActive(false);
+        //    }
+        //}
     }
     void Life(Text life)
     {

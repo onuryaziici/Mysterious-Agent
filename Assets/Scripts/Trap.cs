@@ -6,7 +6,7 @@ public class Trap : MonoBehaviour
 {
     public GameObject[] trapObjects;
     public GameObject trapObject;
-    bool trap = false;
+    public bool trap = false;
     float posY = 1;
     [SerializeField] Transform trapObjectTransform;
     public void Start()

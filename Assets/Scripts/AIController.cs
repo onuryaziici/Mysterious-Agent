@@ -2,8 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 public class AIController : MonoBehaviour
 {
+    public static AIController ai;
+    public Text kill;
+
     NavMeshAgent navMeshAgent;               //  Nav mesh agent component
     public float startWaitTime = 4;                 //  Wait time of every action
     public float timeToRotate = 2;                  //  Wait time when the enemy detect near the player without seeing
@@ -48,7 +52,7 @@ public class AIController : MonoBehaviour
     public float attackRate = 0.5f;
     float nextAttackTime=0f;
     public Player player1;
-    bool isDead = false;
+    public bool isDead = false;
     public bool isMoveable =true;
      public int numberOfEnemies;
      public Vector3 enemyfirstlocation;
@@ -57,6 +61,10 @@ public class AIController : MonoBehaviour
      bool timer=true;
      bool isRotate=true;
      bool Isarrived=true;
+    private void Awake()
+    {
+        ai = this;
+    }
     void Start()
     {
         m_PlayerPosition = Vector3.zero;
@@ -148,6 +156,18 @@ public class AIController : MonoBehaviour
         else
         {
             viewMeshFilter.GetComponent<MeshRenderer>().material = fovWhiteMaterial;
+        }
+        if (!player.GetComponent<BoxCollider>().Equals(null))
+        {
+            if (!isDead)
+            {
+                Debug.Log("fjj");
+                kill.gameObject.SetActive(true);
+            }
+        }
+        else
+        {
+            kill.gameObject.SetActive(false);
         }
     }
     void LateUpdate()
@@ -569,6 +589,11 @@ public class AIController : MonoBehaviour
         numberOfEnemies= PlayerPrefs.GetInt("Enemies");
         animator.SetTrigger("Death");
         isDead = true;
+        if (!player.GetComponent<BoxCollider>().Equals(null))
+        {
+            Debug.Log("ser");
+            kill.gameObject.SetActive(false);
+        }
         transform.Find("ViewVisualisation").gameObject.SetActive(false);
         this.gameObject.GetComponent<AIController>().enabled = false;
         this.gameObject.GetComponent<Rigidbody>().isKinematic = true;
