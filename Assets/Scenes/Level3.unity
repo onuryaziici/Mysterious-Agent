@@ -9040,6 +9040,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d142010cf604b2e409da8071a8ba36ea, type: 3}
+--- !u!1 &700666387 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7239057228271290365, guid: d142010cf604b2e409da8071a8ba36ea, type: 3}
+  m_PrefabInstance: {fileID: 700666386}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &704389846 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 4cda8f108acb8034485be911446afaae, type: 3}
@@ -16332,6 +16337,11 @@ MeshFilter:
   m_CorrespondingSourceObject: {fileID: 8347562097006237346, guid: d142010cf604b2e409da8071a8ba36ea, type: 3}
   m_PrefabInstance: {fileID: 1367421999}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1367422003 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7239057228271290365, guid: d142010cf604b2e409da8071a8ba36ea, type: 3}
+  m_PrefabInstance: {fileID: 1367421999}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1371852082
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19596,22 +19606,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   triggerOne: {fileID: 7239057227860931315}
   triggerTwo: {fileID: 1557157671}
-  triggerThree: {fileID: 0}
-  triggerFour: {fileID: 0}
-  triggerFive: {fileID: 0}
-  triggerSix: {fileID: 0}
-  triggerSeven: {fileID: 0}
+  triggerThree: {fileID: 700666387}
+  triggerFour: {fileID: 1825608411}
+  triggerFive: {fileID: 2071859846}
+  triggerSix: {fileID: 1367422003}
+  triggerSeven: {fileID: 2041985319}
   reloadImage: {fileID: 360386573}
   lifeBar: {fileID: 1514717345}
   meshReturnBar: {fileID: 497922812205355111}
   incNumber: {fileID: 1076691764}
   lifeEnemyOne: {fileID: 73196318}
   lifeEnemyTwo: {fileID: 1640028076}
-  lifeEnemyThree: {fileID: 0}
-  lifeEnemyFour: {fileID: 0}
-  lifeEnemyFive: {fileID: 0}
-  lifeEnemySix: {fileID: 0}
-  lifeEnemySeven: {fileID: 0}
+  lifeEnemyThree: {fileID: 876995774}
+  lifeEnemyFour: {fileID: 1509190474}
+  lifeEnemyFive: {fileID: 1109880763}
+  lifeEnemySix: {fileID: 2041985321}
+  lifeEnemySeven: {fileID: 1071634030}
   cloud: {fileID: 805007787}
   lifeBarPlus: {fileID: 1819428543}
   recoveryTime: 10
@@ -22296,6 +22306,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d142010cf604b2e409da8071a8ba36ea, type: 3}
+--- !u!1 &1825608411 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7239057228271290365, guid: d142010cf604b2e409da8071a8ba36ea, type: 3}
+  m_PrefabInstance: {fileID: 1825608410}
+  m_PrefabAsset: {fileID: 0}
 --- !u!198 &1845574650 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 8347562096204845037, guid: d142010cf604b2e409da8071a8ba36ea, type: 3}
@@ -24878,6 +24893,11 @@ ParticleSystem:
 --- !u!33 &2071859845 stripped
 MeshFilter:
   m_CorrespondingSourceObject: {fileID: 8347562097006237346, guid: d142010cf604b2e409da8071a8ba36ea, type: 3}
+  m_PrefabInstance: {fileID: 2071859842}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2071859846 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7239057228271290365, guid: d142010cf604b2e409da8071a8ba36ea, type: 3}
   m_PrefabInstance: {fileID: 2071859842}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2076788148
