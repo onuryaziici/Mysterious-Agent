@@ -104,7 +104,7 @@ public class TriggerControl : MonoBehaviour
     }
     void MeshChange()
     {
-        if (isCompleted && meshChange)
+        if (isCompleted && meshChange && !Player.instance.isDie)
         {
             safe=true;
             gameObject.transform.GetChild(1).GetComponent<SkinnedMeshRenderer>().enabled = false;

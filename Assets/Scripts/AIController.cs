@@ -163,6 +163,7 @@ public class AIController : MonoBehaviour
             {
                 Debug.Log("fjj");
                 kill.gameObject.SetActive(true);
+                kill.gameObject.transform.rotation = Quaternion.identity;
             }
         }
         else
@@ -180,6 +181,8 @@ public class AIController : MonoBehaviour
         {
             cloud.Play();
             StartCoroutine(TakeDamage());
+            collision.gameObject.tag = "Obstacle";
+            collision.gameObject.layer = LayerMask.NameToLayer("Obstacle");
         }
     }
 

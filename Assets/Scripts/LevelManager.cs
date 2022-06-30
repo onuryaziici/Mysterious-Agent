@@ -70,7 +70,7 @@ public class LevelManager : MonoBehaviour
     }
     public void ScoreInc()
     {
-        score ++;
+        score = score + 0.5f;
         PlayerPrefs.SetFloat("Score", score);
     }
     public void SaveStart()
