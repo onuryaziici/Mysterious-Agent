@@ -161,7 +161,6 @@ public class AIController : MonoBehaviour
         {
             if (!isDead)
             {
-                Debug.Log("fjj");
                 kill.gameObject.SetActive(true);
                 kill.gameObject.transform.rotation = Quaternion.identity;
             }

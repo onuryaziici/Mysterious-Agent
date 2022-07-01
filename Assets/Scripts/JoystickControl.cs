@@ -13,6 +13,7 @@ public class JoystickControl : MonoBehaviour
     float turnSpeed = 5;
 
     public Animator playerAnim;
+    public bool canMove=true;
     void Awake()
     {
         if (instance == null)
@@ -22,8 +23,17 @@ public class JoystickControl : MonoBehaviour
     }
     void FixedUpdate()
     {
-        if (Input.GetButton("Fire1"))
+        if (playerAnim.GetCurrentAnimatorStateInfo(0).IsName("Punch"))
         {
+            canMove=false;
+        }
+        else
+        {
+            canMove=true;
+        }
+        if (Input.GetButton("Fire1") && canMove)
+        {
+            
             Joystick();
         }
     }

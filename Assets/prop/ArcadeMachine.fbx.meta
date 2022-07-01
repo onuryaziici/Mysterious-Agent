@@ -3,7 +3,17 @@ guid: 5892e75386b3ca246a1c37b45293aa19
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: PolygonOffice_Texture_01_A
+    second: {fileID: 2800000, guid: 4dc94a5c6d5aff64295c23d8c2f6ba46, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: PolygonOffice_Texture_Sceen_Arcade_01
+    second: {fileID: 2800000, guid: 16a4be1f9ccd2694b84b503c8bd081d2, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
