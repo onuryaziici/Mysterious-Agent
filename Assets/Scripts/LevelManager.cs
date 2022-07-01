@@ -31,13 +31,24 @@ public class LevelManager : MonoBehaviour
     }
     private void Start()
     {
-        //SceneManager.LoadScene(PlayerPrefs.GetInt("Level"));
+        SceneManager.LoadScene(PlayerPrefs.GetInt("Level"));
+        if (!PlayerPrefs.HasKey("Score"))
+        {
+            PlayerPrefs.SetFloat("Score", score);
+        }
         scoreText.text = "Level: " + (PlayerPrefs.GetFloat("Score")).ToString();
     }
     private void Update()
     {
-        Debug.Log(PlayerPrefs.GetInt("Level"));
-        Debug.Log(PlayerPrefs.GetFloat("Score"));
+        print(score);
+        print(PlayerPrefs.GetFloat("Score"));
+        if (PlayerPrefs.GetFloat("Score") == 0)
+        {
+            score = 1;
+            scoreText.text = "Level: " + 1;
+        }
+        //Debug.Log(PlayerPrefs.GetInt("Level"));
+        //Debug.Log(PlayerPrefs.GetFloat("Score"));
         scoreText.text = "Level: " + (PlayerPrefs.GetFloat("Score")).ToString();
     }
     public void LevelManage()
