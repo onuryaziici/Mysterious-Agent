@@ -49,7 +49,6 @@ public class LevelManager : MonoBehaviour
                 buildIndex.Remove(SceneManager.GetActiveScene().buildIndex);
                 random = Random.Range(0, buildIndex.Count);
                 SceneManager.LoadScene(buildIndex[random]);
-                buildIndex.Remove(buildIndex.Count - 1);
             }
             else
             {
@@ -59,7 +58,7 @@ public class LevelManager : MonoBehaviour
         }
         else if (score == bossLevelIndex)
         {
-            buildIndex.Remove(buildIndex.Count - 1);
+            buildIndex.Clear();
             SceneManager.LoadScene(5);
             buildIndex.Add(1);
             buildIndex.Add(2);

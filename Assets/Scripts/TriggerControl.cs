@@ -8,10 +8,8 @@ public class TriggerControl : MonoBehaviour
 {
     public static TriggerControl instance = null;
     GameObject triggerObject;
-    public GameObject triggerOne, triggerTwo, triggerThree, triggerFour ,triggerFive ,triggerSix, triggerSeven ;
     public Image reloadImage, lifeBar, meshReturnBar;
     public Text incNumber;
-   // public Text lifeEnemyOne, lifeEnemyTwo, lifeEnemyThree, lifeEnemyFour, lifeEnemyFive, lifeEnemySix, lifeEnemySeven;
     public ParticleSystem cloud;
     public ParticleSystem lifeBarPlus;
     public float recoveryTime;
@@ -166,56 +164,4 @@ public class TriggerControl : MonoBehaviour
     {
         anim.SetTrigger("Attack");
     }
-    /*void LifeText()
-    {
-        if (!gameObject.GetComponent<BoxCollider>().Equals(null))
-        {
-            if (triggerOne.activeInHierarchy)
-            {
-                lifeEnemyOne.gameObject.SetActive(true);
-                lifeEnemyOne.gameObject.transform.rotation = Quaternion.identity;
-            }
-            if (triggerTwo.activeInHierarchy)
-            {
-                lifeEnemyTwo.gameObject.SetActive(true);
-                lifeEnemyTwo.gameObject.transform.rotation = Quaternion.identity;
-            }
-            if (triggerThree.activeInHierarchy)
-            {
-                lifeEnemyThree.gameObject.SetActive(true);
-                lifeEnemyThree.gameObject.transform.rotation = Quaternion.identity;
-            }
-            if (triggerFour.activeInHierarchy)
-            {
-                lifeEnemyFour.gameObject.SetActive(true);
-                lifeEnemyFour.gameObject.transform.rotation = Quaternion.identity;
-            }
-            if (triggerFive.activeInHierarchy)
-            {
-                lifeEnemyFive.gameObject.SetActive(true);
-                lifeEnemyFive.gameObject.transform.rotation = Quaternion.identity;
-            }
-            if (triggerSix.activeInHierarchy)
-            {
-                lifeEnemySix.gameObject.SetActive(true);
-                lifeEnemySix.gameObject.transform.rotation = Quaternion.identity;
-            }
-            if (triggerSeven.activeInHierarchy)
-            {
-                lifeEnemySeven.gameObject.SetActive(true);
-                lifeEnemySeven.gameObject.transform.rotation = Quaternion.identity;
-            }
-            
-        }
-        else
-        {
-            lifeEnemyOne.gameObject.SetActive(false);
-            lifeEnemyTwo.gameObject.SetActive(false);
-            lifeEnemyThree.gameObject.SetActive(false);
-            lifeEnemyFour.gameObject.SetActive(false);
-            lifeEnemyFive.gameObject.SetActive(false);
-            lifeEnemySix.gameObject.SetActive(false);
-            lifeEnemySeven.gameObject.SetActive(false);
-        }
-    }*/
 }
