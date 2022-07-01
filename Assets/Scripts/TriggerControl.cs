@@ -11,7 +11,7 @@ public class TriggerControl : MonoBehaviour
     public GameObject triggerOne, triggerTwo, triggerThree, triggerFour ,triggerFive ,triggerSix, triggerSeven ;
     public Image reloadImage, lifeBar, meshReturnBar;
     public Text incNumber;
-    public Text lifeEnemyOne, lifeEnemyTwo, lifeEnemyThree, lifeEnemyFour, lifeEnemyFive, lifeEnemySix, lifeEnemySeven;
+   // public Text lifeEnemyOne, lifeEnemyTwo, lifeEnemyThree, lifeEnemyFour, lifeEnemyFive, lifeEnemySix, lifeEnemySeven;
     public ParticleSystem cloud;
     public ParticleSystem lifeBarPlus;
     public float recoveryTime;
@@ -84,7 +84,7 @@ public class TriggerControl : MonoBehaviour
         MeshChange();
         MeshPlayer();
         MeshReturn();
-        LifeText();
+        //LifeText();
     }
     void Reload()
     {
@@ -166,7 +166,7 @@ public class TriggerControl : MonoBehaviour
     {
         anim.SetTrigger("Attack");
     }
-    void LifeText()
+    /*void LifeText()
     {
         if (!gameObject.GetComponent<BoxCollider>().Equals(null))
         {
@@ -217,5 +217,5 @@ public class TriggerControl : MonoBehaviour
             lifeEnemySix.gameObject.SetActive(false);
             lifeEnemySeven.gameObject.SetActive(false);
         }
-    }
+    }*/
 }

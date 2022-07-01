@@ -765,17 +765,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &73196318 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5022104058881805700, guid: d142010cf604b2e409da8071a8ba36ea, type: 3}
-  m_PrefabInstance: {fileID: 680162574}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &79638735
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5457,7 +5446,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &473228270
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11415,7 +11404,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.88366663, g: 0.8867924, b: 0.68182623, a: 0}
+  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -19414,13 +19403,6 @@ MonoBehaviour:
   lifeBar: {fileID: 1514717345}
   meshReturnBar: {fileID: 497922812205355111}
   incNumber: {fileID: 1076691764}
-  lifeEnemyOne: {fileID: 73196318}
-  lifeEnemyTwo: {fileID: 1640028076}
-  lifeEnemyThree: {fileID: 876995774}
-  lifeEnemyFour: {fileID: 1509190474}
-  lifeEnemyFive: {fileID: 1109880763}
-  lifeEnemySix: {fileID: 2041985321}
-  lifeEnemySeven: {fileID: 1071634030}
   cloud: {fileID: 805007787}
   lifeBarPlus: {fileID: 1819428543}
   recoveryTime: 10
@@ -19441,6 +19423,7 @@ MonoBehaviour:
   dynamic: {fileID: 579138113}
   background: {fileID: 1140776132}
   playerAnim: {fileID: 1624337451}
+  canMove: 1
 --- !u!23 &1624337448
 MeshRenderer:
   m_ObjectHideFlags: 0

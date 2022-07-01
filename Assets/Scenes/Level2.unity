@@ -5414,7 +5414,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &473228270
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11256,7 +11256,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.88366663, g: 0.8867924, b: 0.68182623, a: 0}
+  m_BackGroundColor: {r: 0.6981132, g: 0.44455323, b: 0.65047723, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -19278,13 +19278,6 @@ MonoBehaviour:
   lifeBar: {fileID: 1514717345}
   meshReturnBar: {fileID: 497922812205355111}
   incNumber: {fileID: 1076691764}
-  lifeEnemyOne: {fileID: 73196318}
-  lifeEnemyTwo: {fileID: 1640028076}
-  lifeEnemyThree: {fileID: 1740302052}
-  lifeEnemyFour: {fileID: 1109880763}
-  lifeEnemyFive: {fileID: 2041985321}
-  lifeEnemySix: {fileID: 563399964}
-  lifeEnemySeven: {fileID: 0}
   cloud: {fileID: 805007787}
   lifeBarPlus: {fileID: 1819428543}
   recoveryTime: 10
