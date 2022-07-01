@@ -27,7 +27,7 @@ public class Player : MonoBehaviour
         PlayerPrefs.SetInt("Level", SceneManager.GetActiveScene().buildIndex);
         //PlayerPrefs.SetFloat("Score", LevelManager.control.score);
         //LevelManager.control.scoreText.text = "Level: " + (PlayerPrefs.GetFloat("Score")).ToString();
-        LevelManager.control.SaveStart();
+        
     }
 
 

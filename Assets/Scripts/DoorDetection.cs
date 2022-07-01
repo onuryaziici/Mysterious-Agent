@@ -39,6 +39,7 @@ public class DoorDetection : MonoBehaviour
                 StartCoroutine(WaitForNextScene());
                 //gameObject.SetActive(false);
                 finishAnim.SetTrigger("Finish");
+                LevelManager.control.SaveStart();
             }
         }
     }

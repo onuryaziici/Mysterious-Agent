@@ -36,8 +36,8 @@ public class LevelManager : MonoBehaviour
     }
     private void Update()
     {
-        //Debug.Log(PlayerPrefs.GetInt("Level"));
-        //Debug.Log(PlayerPrefs.GetFloat("Score"));
+        Debug.Log(PlayerPrefs.GetInt("Level"));
+        Debug.Log(PlayerPrefs.GetFloat("Score"));
         scoreText.text = "Level: " + (PlayerPrefs.GetFloat("Score")).ToString();
     }
     public void LevelManage()
