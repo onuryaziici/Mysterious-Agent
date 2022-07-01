@@ -38,7 +38,7 @@ public class DoorDetection : MonoBehaviour
                 anim.Play("DoorClosed", 0, 0.0f);
                 StartCoroutine(WaitForNextScene());
                 //gameObject.SetActive(false);
-                //finishAnim.SetTrigger("Finish");
+                finishAnim.SetTrigger("Finish");
             }
         }
     }
