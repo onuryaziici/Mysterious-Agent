@@ -68,12 +68,12 @@ public class LevelManager : MonoBehaviour
             buildIndex.Add(2);
             buildIndex.Add(3);
             buildIndex.Add(4);
-            bossLevelIndex += bossLevelIndex;
+            bossLevelIndex += 5;
         }
     }
     public void ScoreInc()
     {
-        score = score + 0.5f;
+        score++;
         PlayerPrefs.SetFloat("Score", score);
     }
     public void SaveStart()
