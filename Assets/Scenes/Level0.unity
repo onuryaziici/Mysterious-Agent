@@ -2043,7 +2043,7 @@ MonoBehaviour:
   anim: {fileID: 758352173}
   openTrigger: 1
   closeTrigger: 0
-  finishAnim: {fileID: 0}
+  finishAnim: {fileID: 1174740867}
   openEnemyCount: 0
   closeEnemyCount: 0
 --- !u!65 &399025326
@@ -3104,7 +3104,7 @@ MonoBehaviour:
   anim: {fileID: 758352173}
   openTrigger: 0
   closeTrigger: 1
-  finishAnim: {fileID: 0}
+  finishAnim: {fileID: 1174740867}
   openEnemyCount: 0
   closeEnemyCount: 0
 --- !u!65 &620285113
@@ -8702,7 +8702,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 870afcba63bfded468dc995a974ce42f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 25
+      value: 27
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 870afcba63bfded468dc995a974ce42f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -11383,7 +11383,7 @@ MonoBehaviour:
   anim: {fileID: 314223289}
   openTrigger: 1
   closeTrigger: 0
-  finishAnim: {fileID: 0}
+  finishAnim: {fileID: 1174740867}
   openEnemyCount: 0
   closeEnemyCount: 0
 --- !u!65 &1670510834
@@ -13111,7 +13111,7 @@ MonoBehaviour:
   anim: {fileID: 314223289}
   openTrigger: 0
   closeTrigger: 1
-  finishAnim: {fileID: 0}
+  finishAnim: {fileID: 1174740867}
   openEnemyCount: 0
   closeEnemyCount: 0
 --- !u!65 &2028292989
