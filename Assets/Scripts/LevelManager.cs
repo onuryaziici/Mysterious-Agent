@@ -35,12 +35,17 @@ public class LevelManager : MonoBehaviour
         {
             PlayerPrefs.SetFloat("Score",score);
         }
+        else
+        {
+            score = PlayerPrefs.GetFloat("Score");
+        }
         SceneManager.LoadScene(PlayerPrefs.GetInt("Level"));
         scoreText.text = "Level: " + (PlayerPrefs.GetFloat("Score")).ToString();
     }
     private void Update()
     {
-        Debug.Log(PlayerPrefs.GetInt("Level"));
+        Debug.Log(!PlayerPrefs.HasKey("Score"));
+        Debug.Log(score);
         Debug.Log(PlayerPrefs.GetFloat("Score"));
         scoreText.text = "Level: " + (PlayerPrefs.GetFloat("Score")).ToString();
     }

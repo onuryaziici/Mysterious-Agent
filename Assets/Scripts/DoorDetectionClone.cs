@@ -37,7 +37,7 @@ public class DoorDetectionClone : MonoBehaviour
                 StartCoroutine(WaitForNextScene());
                 //gameObject.SetActive(false);
                 finishAnim.SetTrigger("Finish");
-                LevelManager.control.SaveStart();
+                //LevelManager.control.SaveStart();
             }
         }
     }
