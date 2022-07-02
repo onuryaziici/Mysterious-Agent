@@ -27,7 +27,30 @@ public class Player : MonoBehaviour
         PlayerPrefs.SetInt("Level", SceneManager.GetActiveScene().buildIndex);
         //PlayerPrefs.SetFloat("Score", LevelManager.control.score);
         //LevelManager.control.scoreText.text = "Level: " + (PlayerPrefs.GetFloat("Score")).ToString();
-        
+        //if (LevelManager.control.buildIndex.Count - 1 == 0)
+        //{
+        //    PlayerPrefs.SetInt("Elemet One", LevelManager.control.buildIndex[LevelManager.control.buildIndex.Count - 1]);
+        //}
+        //else if (LevelManager.control.buildIndex.Count - 1 == 1)
+        //{
+        //    PlayerPrefs.SetInt("Elemet One", LevelManager.control.buildIndex[LevelManager.control.buildIndex.Count - 1]);
+        //    PlayerPrefs.SetInt("Elemet Two", LevelManager.control.buildIndex[LevelManager.control.buildIndex.Count - 2]);
+        //}
+        //else if (LevelManager.control.buildIndex.Count - 1 == 2)
+        //{
+        //    PlayerPrefs.SetInt("Elemet One", LevelManager.control.buildIndex[LevelManager.control.buildIndex.Count - 1]);
+        //    PlayerPrefs.SetInt("Elemet Two", LevelManager.control.buildIndex[LevelManager.control.buildIndex.Count - 2]);
+        //    PlayerPrefs.SetInt("Elemet Three", LevelManager.control.buildIndex[LevelManager.control.buildIndex.Count - 3]);
+        //}
+        //else if (LevelManager.control.buildIndex.Count - 1 == 3)
+        //{
+        //    PlayerPrefs.SetInt("Elemet One", LevelManager.control.buildIndex[LevelManager.control.buildIndex.Count - 1]);
+        //    PlayerPrefs.SetInt("Elemet Two", LevelManager.control.buildIndex[LevelManager.control.buildIndex.Count - 2]);
+        //    PlayerPrefs.SetInt("Elemet Three", LevelManager.control.buildIndex[LevelManager.control.buildIndex.Count - 3]);
+        //    PlayerPrefs.SetInt("Elemet Four", LevelManager.control.buildIndex[LevelManager.control.buildIndex.Count - 4]);
+        //}
+        //Debug.Log(PlayerPrefs.GetInt("Element One") + " " + PlayerPrefs.GetInt("Element Two") + "" +
+        //          PlayerPrefs.GetInt("Element Three") + "" + PlayerPrefs.GetInt("Element Four
     }
 
 

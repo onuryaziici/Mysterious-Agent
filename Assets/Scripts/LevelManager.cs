@@ -10,8 +10,10 @@ public class LevelManager : MonoBehaviour
     public static LevelManager control;
     float score = 1;
     public List<int> buildIndex = new List<int> { 1, 2, 3, 4 };
-    int bossLevelIndex = 5;
+    float bossLevelIndex = 5;
     int random;
+    float mode;
+    float level = 1;
 
     private void Awake()
     {
@@ -31,23 +33,35 @@ public class LevelManager : MonoBehaviour
     }
     private void Start()
     {
+        if (!PlayerPrefs.HasKey("Checkpoint"))
+        {
+            PlayerPrefs.SetFloat("Checkpoint", level);
+        }
+        else
+        {
+            level = PlayerPrefs.GetFloat("Checkpoint");
+        }
         if (!PlayerPrefs.HasKey("Score"))
         {
-            PlayerPrefs.SetFloat("Score",score);
+            PlayerPrefs.SetFloat("Score", score);
         }
         else
         {
             score = PlayerPrefs.GetFloat("Score");
         }
+        score = PlayerPrefs.GetFloat("Checkpoint");
+        PlayerPrefs.SetFloat("Score", level);
         SceneManager.LoadScene(PlayerPrefs.GetInt("Level"));
-        scoreText.text = "Level: " + (PlayerPrefs.GetFloat("Score")).ToString();
+        scoreText.text = "Level: " + (PlayerPrefs.GetFloat("Checkpoint")).ToString();
+        //scoreText.text = "Level: " + (PlayerPrefs.GetFloat("Score")).ToString();
     }
     private void Update()
     {
-        Debug.Log(!PlayerPrefs.HasKey("Score"));
-        Debug.Log(score);
+        Checkpoint();
+        //Debug.Log(!PlayerPrefs.HasKey("Score"));
         Debug.Log(PlayerPrefs.GetFloat("Score"));
-        scoreText.text = "Level: " + (PlayerPrefs.GetFloat("Score")).ToString();
+        //Debug.Log(PlayerPrefs.GetFloat("Score"));
+        //scoreText.text = "Level: " + (PlayerPrefs.GetFloat("Score")).ToString();
     }
     public void LevelManage()
     {
@@ -76,6 +90,13 @@ public class LevelManager : MonoBehaviour
             bossLevelIndex += 5;
         }
     }
+    void Checkpoint()
+    {
+        mode = score % 5;
+        level = score + 1 - mode;
+        PlayerPrefs.SetFloat("Checkpoint", level);
+        Debug.Log(PlayerPrefs.GetFloat("Checkpoint"));
+    }
     public void ScoreInc()
     {
         score++;
@@ -84,6 +105,7 @@ public class LevelManager : MonoBehaviour
     public void SaveStart()
     {
         PlayerPrefs.SetFloat("Score", score);
+        scoreText.text = "Level: " + (PlayerPrefs.GetFloat("Score")).ToString();
     }
     public void SaveDie()
     {
