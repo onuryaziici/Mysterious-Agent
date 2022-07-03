@@ -17377,7 +17377,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 870afcba63bfded468dc995a974ce42f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 65
+      value: -15
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 870afcba63bfded468dc995a974ce42f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -18214,6 +18214,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dynamic: {fileID: 579138113}
   background: {fileID: 1140776132}
+  rb: {fileID: 0}
   playerAnim: {fileID: 1624337451}
   canMove: 1
 --- !u!23 &1624337448

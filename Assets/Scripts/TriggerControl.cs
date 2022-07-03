@@ -82,7 +82,6 @@ public class TriggerControl : MonoBehaviour
         MeshChange();
         MeshPlayer();
         MeshReturn();
-        //LifeText();
     }
     void Reload()
     {

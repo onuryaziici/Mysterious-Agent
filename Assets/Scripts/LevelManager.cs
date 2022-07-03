@@ -53,16 +53,10 @@ public class LevelManager : MonoBehaviour
         PlayerPrefs.SetFloat("Score", level);
         SceneManager.LoadScene(PlayerPrefs.GetInt("Level"));
         scoreText.text = "Level: " + (PlayerPrefs.GetFloat("Checkpoint")).ToString();
-        //scoreText.text = "Level: " + (PlayerPrefs.GetFloat("Score")).ToString();
     }
     private void Update()
     {
         Checkpoint();
-        //Debug.Log(!PlayerPrefs.HasKey("Score"));
-        Debug.Log(PlayerPrefs.GetFloat("Score"));
-        Debug.Log(bossLevelIndex);
-        //Debug.Log(PlayerPrefs.GetFloat("Score"));
-        //scoreText.text = "Level: " + (PlayerPrefs.GetFloat("Score")).ToString();
     }
     public void LevelManage()
     {
@@ -90,8 +84,7 @@ public class LevelManager : MonoBehaviour
             buildIndex.Add(1);
             buildIndex.Add(2);
             buildIndex.Add(3);
-            buildIndex.Add(4);
-            //bossLevelIndex += 5;
+            buildIndex.Add(4); 
         }
     }
     void Checkpoint()

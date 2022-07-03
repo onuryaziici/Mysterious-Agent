@@ -33,11 +33,8 @@ public class DoorDetectionClone : MonoBehaviour
 
             else if (closeTrigger && PlayerPrefs.GetInt("Enemies") == closeEnemyCount)
             {
-                //anim.Play("DoorClosed", 0, 0.0f);
                 StartCoroutine(WaitForNextScene());
-                //gameObject.SetActive(false);
                 finishAnim.SetTrigger("Finish");
-                //LevelManager.control.SaveStart();
             }
         }
     }

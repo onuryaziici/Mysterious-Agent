@@ -16,9 +16,4 @@ public class AgentCount : MonoBehaviour
     {
         agentCountText.text = "" + agentCount;
     }
-    void Update()
-    {
-        // Debug.Log(agentCount);
-        // Debug.Log(newAgentCount);
-    }
 }
