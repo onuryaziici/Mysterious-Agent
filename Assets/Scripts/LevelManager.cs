@@ -60,12 +60,13 @@ public class LevelManager : MonoBehaviour
         Checkpoint();
         //Debug.Log(!PlayerPrefs.HasKey("Score"));
         Debug.Log(PlayerPrefs.GetFloat("Score"));
+        Debug.Log(bossLevelIndex);
         //Debug.Log(PlayerPrefs.GetFloat("Score"));
         //scoreText.text = "Level: " + (PlayerPrefs.GetFloat("Score")).ToString();
     }
     public void LevelManage()
     {
-        if (score != bossLevelIndex)
+        if (score % bossLevelIndex != 0)
         {
             if (buildIndex.Contains(SceneManager.GetActiveScene().buildIndex))
             {
@@ -79,21 +80,31 @@ public class LevelManager : MonoBehaviour
                 SceneManager.LoadScene(buildIndex[random]);
             }
         }
-        else if (score == bossLevelIndex)
+        else if (score % bossLevelIndex == 0)
         {
-            buildIndex.Clear();
+            if (buildIndex.Count > 0)
+            {
+                buildIndex.Clear();
+            }
             SceneManager.LoadScene(5);
             buildIndex.Add(1);
             buildIndex.Add(2);
             buildIndex.Add(3);
             buildIndex.Add(4);
-            bossLevelIndex += 5;
+            //bossLevelIndex += 5;
         }
     }
     void Checkpoint()
     {
-        mode = score % 5;
-        level = score + 1 - mode;
+        if (score % 5 != 0)
+        {
+            mode = score % 5;
+            level = score + 1 - mode;
+        }
+        else
+        {
+            level = score;
+        }
         PlayerPrefs.SetFloat("Checkpoint", level);
         Debug.Log(PlayerPrefs.GetFloat("Checkpoint"));
     }

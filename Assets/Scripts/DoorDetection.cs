@@ -47,7 +47,7 @@ public class DoorDetection : MonoBehaviour
     {
         LevelManager.control.ScoreInc();
         yield return new WaitForSeconds(1f);
-        LevelManager.control.LevelManage();
+        //LevelManager.control.LevelManage();
     }
 
 
