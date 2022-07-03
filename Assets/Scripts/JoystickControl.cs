@@ -11,11 +11,13 @@ public class JoystickControl : MonoBehaviour
 
     float moveSpeed = 5;
     float turnSpeed = 5;
+    public Rigidbody rb;
 
     public Animator playerAnim;
     public bool canMove=true;
     void Awake()
     {
+        rb = GetComponent<Rigidbody>();
         if (instance == null)
         {
             instance = this;
@@ -33,8 +35,11 @@ public class JoystickControl : MonoBehaviour
         }
         if (Input.GetButton("Fire1") && canMove)
         {
-            
             Joystick();
+        }
+        else
+        {
+             rb.velocity = new Vector3(0, 0, 0);
         }
     }
     void Joystick()
