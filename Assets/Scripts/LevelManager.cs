@@ -99,7 +99,6 @@ public class LevelManager : MonoBehaviour
             level = score;
         }
         PlayerPrefs.SetFloat("Checkpoint", level);
-        Debug.Log(PlayerPrefs.GetFloat("Checkpoint"));
     }
     public void ScoreInc()
     {
